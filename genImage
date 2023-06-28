@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript to Image</title>
+  <form action="http://127.0.0.0:88/" method="GET">
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+<body>
+  <pre id="jsCode">
+    const cookies = document.cookie;
+    console.log(cookies);
+
+  </pre>
+
+  <button onclick="convertToImage()">Gen</button>
+
+  <script>
+    function convertToImage() {
+      html2canvas(document.getElementById('jsCode')).then(function(canvas) {
+        var img = canvas.toDataURL('image/png');
+        var link = document.createElement('a');
+        link.href = img;
+        link.download = 'javascript_code.png';
+        link.click();
+      });
+    }
+  </script>
+</body>
+</html>
