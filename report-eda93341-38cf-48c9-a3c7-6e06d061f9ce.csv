@@ -1,0 +1,1797 @@
+IP,Hostname,Port,Port Protocol,CVSS,Severity,Solution Type,NVT Name,Summary,Specific Result,NVT OID,CVEs,Task ID,Task Name,Timestamp,Result ID,Impact,Solution,Affected Software/OS,Vulnerability Insight,Vulnerability Detection Method,Product Detection Result,BIDs,CERTs,Other References
+192.168.56.104,,,,10.0,High,"Mitigation","Operating System (OS) End of Life (EOL) Detection","The Operating System (OS) on the remote host has reached the End
+  of Life (EOL) and should not be used anymore.","The ""Ubuntu"" Operating System on the remote host has reached the end of life.
+
+CPE:               cpe:/o:canonical:ubuntu_linux:8.04
+Installed version,
+build or SP:       8.04
+EOL date:          2013-05-09
+EOL info:          https://wiki.ubuntu.com/Releases
+",1.3.6.1.4.1.25623.1.0.103674,"",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,b5171eed-ef8a-4b19-8658-a49c8bc81646,"An EOL version of an OS is not receiving any security updates
+  from the vendor. Unfixed security vulnerabilities might be leveraged by an attacker to compromise
+  the security of this host.","Upgrade the OS on the remote host to a version which is still
+  supported and receiving security updates by the vendor.","","","Checks if an EOL version of an OS is present on the target
+  host.
+Details:
+Operating System (OS) End of Life (EOL) Detection
+(OID: 1.3.6.1.4.1.25623.1.0.103674)
+Version used: 2022-04-05T13:00:52Z
+","Product: cpe:/o:canonical:ubuntu_linux:8.04
+Method: OS Detection Consolidation and Reporting
+(OID: 1.3.6.1.4.1.25623.1.0.105937)
+","","",""
+192.168.56.104,,512,tcp,10.0,High,"Mitigation","The rexec service is running","This remote host is running a rexec service.","The rexec service was detected on the target system.
+",1.3.6.1.4.1.25623.1.0.100111,"CVE-1999-0618",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,18483be9-fb3e-4c61-8066-470e4fe1afff,"","Disable the rexec service and use alternatives like SSH instead.","","rexec (remote execution client for an exec server) has the same kind of functionality
+  that rsh has: you can execute shell commands on a remote computer.
+
+  The main difference is that rexec authenticate by reading the
+  username and password *unencrypted* from the socket.","Checks if a vulnerable version is present on the target host.
+Details:
+The rexec service is running
+(OID: 1.3.6.1.4.1.25623.1.0.100111)
+Version used: 2020-10-01T11:33:30Z
+","","","",""
+192.168.56.104,,9080,tcp,9.8,High,"VendorFix","Lighttpd < 1.4.35 Multiple Vulnerabilities - Active Check","Lighttpd is prone to multiple vulnerabilities.","Vulnerability was detected according to the Vulnerability Detection Method.",1.3.6.1.4.1.25623.1.0.802072,"CVE-2014-2323,CVE-2014-2324",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,000a45ef-5958-465b-ba44-5a968b9c66c4,"Successful exploitation will allow remote attackers to execute
+  arbitrary SQL commands and remote attackers to read arbitrary files via hostname.","Update to version 1.4.35 or later.","Lighttpd versions prior to 1.4.35.","The following flaws exist:
+
+  - mod_mysql_vhost module is not properly sanitizing user supplied input passed via the hostname
+
+  - mod_evhost and mod_simple_vhost modules are not properly sanitizing user supplied input via the
+  hostname","Sends a crafted HTTP GET request and checks the response.
+Details:
+Lighttpd < 1.4.35 Multiple Vulnerabilities - Active Check
+(OID: 1.3.6.1.4.1.25623.1.0.802072)
+Version used: 2023-02-01T10:08:40Z
+","Product: cpe:/a:lighttpd:lighttpd:1.4.19
+Method: Lighttpd Server Detection (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.111079)
+","","DFN-CERT-2014-0311,CB-K14/0300",""
+192.168.56.104,,9443,tcp,9.8,High,"VendorFix","Lighttpd < 1.4.35 Multiple Vulnerabilities - Active Check","Lighttpd is prone to multiple vulnerabilities.","Vulnerability was detected according to the Vulnerability Detection Method.",1.3.6.1.4.1.25623.1.0.802072,"CVE-2014-2323,CVE-2014-2324",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,5476845c-2026-4a26-893f-d7680784f668,"Successful exploitation will allow remote attackers to execute
+  arbitrary SQL commands and remote attackers to read arbitrary files via hostname.","Update to version 1.4.35 or later.","Lighttpd versions prior to 1.4.35.","The following flaws exist:
+
+  - mod_mysql_vhost module is not properly sanitizing user supplied input passed via the hostname
+
+  - mod_evhost and mod_simple_vhost modules are not properly sanitizing user supplied input via the
+  hostname","Sends a crafted HTTP GET request and checks the response.
+Details:
+Lighttpd < 1.4.35 Multiple Vulnerabilities - Active Check
+(OID: 1.3.6.1.4.1.25623.1.0.802072)
+Version used: 2023-02-01T10:08:40Z
+","Product: cpe:/a:lighttpd:lighttpd:1.4.19
+Method: Lighttpd Server Detection (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.111079)
+","","DFN-CERT-2014-0311,CB-K14/0300",""
+192.168.56.104,,3632,tcp,9.3,High,"VendorFix","DistCC RCE Vulnerability (CVE-2004-2687)","DistCC is prone to a remote code execution (RCE)
+  vulnerability.","It was possible to execute the ""id"" command.
+
+Result: uid=0(root) gid=0(root)
+",1.3.6.1.4.1.25623.1.0.103553,"CVE-2004-2687",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,99096cb6-72f0-4bfe-9d9a-ed4a7be05ca0,"DistCC by default trusts its clients completely that in turn
+  could allow a malicious client to execute arbitrary commands on the server.","Vendor updates are available. Please see the references for
+  more information.
+
+  For more information about DistCC's security see the references.","","DistCC 2.x, as used in XCode 1.5 and others, when not configured
+  to restrict access to the server port, allows remote attackers to execute arbitrary commands via
+  compilation jobs, which are executed by the server without authorization checks.","
+Details:
+DistCC RCE Vulnerability (CVE-2004-2687)
+(OID: 1.3.6.1.4.1.25623.1.0.103553)
+Version used: 2022-07-07T10:16:06Z
+","","","DFN-CERT-2019-0381",""
+192.168.56.104,,8443,tcp,7.5,High,"VendorFix","Drupal Core SQLi Vulnerability (SA-CORE-2014-005) - Active Check","Drupal is prone to an SQL injection (SQLi) vulnerability.","Vulnerable URL: https://192.168.56.104:8443/drupal/?q=node&destination=node
+",1.3.6.1.4.1.25623.1.0.105101,"CVE-2014-3704",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,21f67c25-db04-40e1-8536-85e169b96bd6,"Exploiting this issue could allow an attacker to execute
+  arbitrary code, to gain elevated privileges and to compromise the application, access or modify
+  data, or exploit latent vulnerabilities in the underlying database.","Updates are available. Please see the references for more
+  information.","Drupal 7.x versions prior to 7.32 are vulnerable.","Drupal fails to sufficiently sanitize user-supplied data before
+  using it in an SQL query.","Sends a special crafted HTTP POST request and checks the
+  response.
+Details:
+Drupal Core SQLi Vulnerability (SA-CORE-2014-005) - Active Check
+(OID: 1.3.6.1.4.1.25623.1.0.105101)
+Version used: 2022-04-14T11:24:11Z
+","","","DFN-CERT-2014-1369,DFN-CERT-2014-0958,CB-K14/1301,CB-K14/0920",""
+192.168.56.104,,80,tcp,7.5,High,"VendorFix","Drupal Core SQLi Vulnerability (SA-CORE-2014-005) - Active Check","Drupal is prone to an SQL injection (SQLi) vulnerability.","Vulnerable URL: http://192.168.56.104/drupal/?q=node&destination=node
+",1.3.6.1.4.1.25623.1.0.105101,"CVE-2014-3704",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,21b7a115-86a5-4e50-b8f0-4a2f5494430c,"Exploiting this issue could allow an attacker to execute
+  arbitrary code, to gain elevated privileges and to compromise the application, access or modify
+  data, or exploit latent vulnerabilities in the underlying database.","Updates are available. Please see the references for more
+  information.","Drupal 7.x versions prior to 7.32 are vulnerable.","Drupal fails to sufficiently sanitize user-supplied data before
+  using it in an SQL query.","Sends a special crafted HTTP POST request and checks the
+  response.
+Details:
+Drupal Core SQLi Vulnerability (SA-CORE-2014-005) - Active Check
+(OID: 1.3.6.1.4.1.25623.1.0.105101)
+Version used: 2022-04-14T11:24:11Z
+","","","DFN-CERT-2014-1369,DFN-CERT-2014-0958,CB-K14/1301,CB-K14/0920",""
+192.168.56.104,,443,tcp,7.5,High,"VendorFix","Drupal Core SQLi Vulnerability (SA-CORE-2014-005) - Active Check","Drupal is prone to an SQL injection (SQLi) vulnerability.","Vulnerable URL: https://192.168.56.104/drupal/?q=node&destination=node
+",1.3.6.1.4.1.25623.1.0.105101,"CVE-2014-3704",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,4ef2a8ab-e2b6-4bec-a726-d567239792d2,"Exploiting this issue could allow an attacker to execute
+  arbitrary code, to gain elevated privileges and to compromise the application, access or modify
+  data, or exploit latent vulnerabilities in the underlying database.","Updates are available. Please see the references for more
+  information.","Drupal 7.x versions prior to 7.32 are vulnerable.","Drupal fails to sufficiently sanitize user-supplied data before
+  using it in an SQL query.","Sends a special crafted HTTP POST request and checks the
+  response.
+Details:
+Drupal Core SQLi Vulnerability (SA-CORE-2014-005) - Active Check
+(OID: 1.3.6.1.4.1.25623.1.0.105101)
+Version used: 2022-04-14T11:24:11Z
+","","","DFN-CERT-2014-1369,DFN-CERT-2014-0958,CB-K14/1301,CB-K14/0920",""
+192.168.56.104,,80,tcp,7.5,High,"Mitigation","Test HTTP dangerous methods","Misconfigured web servers allows remote clients to perform
+  dangerous HTTP methods such as PUT and DELETE.","We could upload the following files via the PUT method at this web server:
+
+http://192.168.56.104/webdav/puttest1177667022.html
+
+We could delete the following files via the DELETE method at this web server:
+
+http://192.168.56.104/webdav/puttest1177667022.html
+
+
+",1.3.6.1.4.1.25623.1.0.10498,"",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,07964645-d121-457d-a1a5-301fe63ab0e1,"'- Enabled PUT method: This might allow an attacker to upload
+  and run arbitrary code on this web server.
+
+  - Enabled DELETE method: This might allow an attacker to delete additional files on this web
+  server.","Use access restrictions to these dangerous HTTP methods
+  or disable them completely.","Web servers with enabled PUT and/or DELETE methods.","","Checks if dangerous HTTP methods such as PUT and DELETE are
+  enabled and can be misused to upload or delete files.
+Details:
+Test HTTP dangerous methods
+(OID: 1.3.6.1.4.1.25623.1.0.10498)
+Version used: 2022-05-12T09:32:01Z
+","","","",""
+192.168.56.104,,8443,tcp,7.5,High,"VendorFix","SSL/TLS: OpenSSL TLS heartbeat Extension Information Disclosure Vulnerability","OpenSSL is prone to an information disclosure vulnerability.","Vulnerability was detected according to the Vulnerability Detection Method.",1.3.6.1.4.1.25623.1.0.103936,"CVE-2014-0160",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,34789b38-4607-4327-9b46-2eb743767f97,"An attacker can exploit this issue to gain access to sensitive
+  information that may aid in further attacks.","Updates are available. Please see the references for more information.","OpenSSL 1.0.1f, 1.0.1e, 1.0.1d, 1.0.1c, 1.0.1b, 1.0.1a, and
+  1.0.1 are vulnerable.","The TLS and DTLS implementations do not properly handle
+  Heartbeat Extension packets.","Send a special crafted TLS request and check the response.
+Details:
+SSL/TLS: OpenSSL TLS 'heartbeat' Extension Information Disclosure Vulnerabil...
+(OID: 1.3.6.1.4.1.25623.1.0.103936)
+Version used: 2023-04-18T10:19:20Z
+","","","DFN-CERT-2016-0773,DFN-CERT-2014-0495,DFN-CERT-2014-0483,DFN-CERT-2014-0421,DFN-CERT-2014-0420,CB-K16/0719,CB-K14/0482,CB-K14/0458,CB-K14/0406,CB-K14/0405",""
+192.168.56.104,,8443,tcp,7.5,High,"Mitigation","SSL/TLS: Report Vulnerable Cipher Suites for HTTPS","This routine reports all SSL/TLS cipher suites accepted by a service
+  where attack vectors exists only on HTTPS services.","'Vulnerable' cipher suites accepted by this service via the SSLv3 protocol:
+
+TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (SWEET32)
+TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (SWEET32)
+TLS_RSA_WITH_3DES_EDE_CBC_SHA (SWEET32)
+
+'Vulnerable' cipher suites accepted by this service via the TLSv1.0 protocol:
+
+TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (SWEET32)
+TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (SWEET32)
+TLS_RSA_WITH_3DES_EDE_CBC_SHA (SWEET32)
+
+'Vulnerable' cipher suites accepted by this service via the TLSv1.1 protocol:
+
+TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (SWEET32)
+TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (SWEET32)
+TLS_RSA_WITH_3DES_EDE_CBC_SHA (SWEET32)
+
+'Vulnerable' cipher suites accepted by this service via the TLSv1.2 protocol:
+
+TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (SWEET32)
+TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (SWEET32)
+TLS_RSA_WITH_3DES_EDE_CBC_SHA (SWEET32)
+
+
+",1.3.6.1.4.1.25623.1.0.108031,"CVE-2016-2183,CVE-2016-6329,CVE-2020-12872",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,99eab299-744a-4559-b928-2ad3084b779e,"","The configuration of this services should be changed so
+  that it does not accept the listed cipher suites anymore.
+
+  Please see the references for more resources supporting you with this task.","Services accepting vulnerable SSL/TLS cipher suites via HTTPS.","These rules are applied for the evaluation of the vulnerable cipher suites:
+
+  - 64-bit block cipher 3DES vulnerable to the SWEET32 attack (CVE-2016-2183).","
+Details:
+SSL/TLS: Report Vulnerable Cipher Suites for HTTPS
+(OID: 1.3.6.1.4.1.25623.1.0.108031)
+Version used: 2022-08-01T10:11:45Z
+","","","DFN-CERT-2021-1618,DFN-CERT-2021-0775,DFN-CERT-2021-0770,DFN-CERT-2021-0274,DFN-CERT-2020-2141,DFN-CERT-2020-0368,DFN-CERT-2019-1455,DFN-CERT-2019-0068,DFN-CERT-2018-1296,DFN-CERT-2018-0323,DFN-CERT-2017-2070,DFN-CERT-2017-1954,DFN-CERT-2017-1885,DFN-CERT-2017-1831,DFN-CERT-2017-1821,DFN-CERT-2017-1785,DFN-CERT-2017-1626,DFN-CERT-2017-1326,DFN-CERT-2017-1239,DFN-CERT-2017-1238,DFN-CERT-2017-1090,DFN-CERT-2017-1060,DFN-CERT-2017-0968,DFN-CERT-2017-0947,DFN-CERT-2017-0946,DFN-CERT-2017-0904,DFN-CERT-2017-0816,DFN-CERT-2017-0746,DFN-CERT-2017-0677,DFN-CERT-2017-0675,DFN-CERT-2017-0611,DFN-CERT-2017-0609,DFN-CERT-2017-0522,DFN-CERT-2017-0519,DFN-CERT-2017-0482,DFN-CERT-2017-0351,DFN-CERT-2017-0090,DFN-CERT-2017-0089,DFN-CERT-2017-0088,DFN-CERT-2017-0086,DFN-CERT-2016-1943,DFN-CERT-2016-1937,DFN-CERT-2016-1732,DFN-CERT-2016-1726,DFN-CERT-2016-1715,DFN-CERT-2016-1714,DFN-CERT-2016-1588,DFN-CERT-2016-1555,DFN-CERT-2016-1391,DFN-CERT-2016-1378,WID-SEC-2022-2226,WID-SEC-2022-1955,CB-K21/1094,CB-K20/1023,CB-K20/0321,CB-K20/0314,CB-K20/0157,CB-K19/0618,CB-K19/0615,CB-K18/0296,CB-K17/1980,CB-K17/1871,CB-K17/1803,CB-K17/1753,CB-K17/1750,CB-K17/1709,CB-K17/1558,CB-K17/1273,CB-K17/1202,CB-K17/1196,CB-K17/1055,CB-K17/1026,CB-K17/0939,CB-K17/0917,CB-K17/0915,CB-K17/0877,CB-K17/0796,CB-K17/0724,CB-K17/0661,CB-K17/0657,CB-K17/0582,CB-K17/0581,CB-K17/0506,CB-K17/0504,CB-K17/0467,CB-K17/0345,CB-K17/0098,CB-K17/0089,CB-K17/0086,CB-K17/0082,CB-K16/1837,CB-K16/1830,CB-K16/1635,CB-K16/1630,CB-K16/1624,CB-K16/1622,CB-K16/1500,CB-K16/1465,CB-K16/1307,CB-K16/1296",""
+192.168.56.104,,443,tcp,7.5,High,"Mitigation","Test HTTP dangerous methods","Misconfigured web servers allows remote clients to perform
+  dangerous HTTP methods such as PUT and DELETE.","We could upload the following files via the PUT method at this web server:
+
+https://192.168.56.104/webdav/puttest923961087.html
+
+We could delete the following files via the DELETE method at this web server:
+
+https://192.168.56.104/webdav/puttest923961087.html
+
+
+",1.3.6.1.4.1.25623.1.0.10498,"",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,fe6d9261-57d7-4cff-8331-3681ec1a973e,"'- Enabled PUT method: This might allow an attacker to upload
+  and run arbitrary code on this web server.
+
+  - Enabled DELETE method: This might allow an attacker to delete additional files on this web
+  server.","Use access restrictions to these dangerous HTTP methods
+  or disable them completely.","Web servers with enabled PUT and/or DELETE methods.","","Checks if dangerous HTTP methods such as PUT and DELETE are
+  enabled and can be misused to upload or delete files.
+Details:
+Test HTTP dangerous methods
+(OID: 1.3.6.1.4.1.25623.1.0.10498)
+Version used: 2022-05-12T09:32:01Z
+","","","",""
+192.168.56.104,,9080,tcp,7.5,High,"VendorFix","Drupal Core SQLi Vulnerability (SA-CORE-2014-005) - Active Check","Drupal is prone to an SQL injection (SQLi) vulnerability.","Vulnerable URL: http://192.168.56.104:9080/drupal/?q=node&destination=node
+",1.3.6.1.4.1.25623.1.0.105101,"CVE-2014-3704",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,eececb14-b1b0-45e5-80eb-078e80c5e1ad,"Exploiting this issue could allow an attacker to execute
+  arbitrary code, to gain elevated privileges and to compromise the application, access or modify
+  data, or exploit latent vulnerabilities in the underlying database.","Updates are available. Please see the references for more
+  information.","Drupal 7.x versions prior to 7.32 are vulnerable.","Drupal fails to sufficiently sanitize user-supplied data before
+  using it in an SQL query.","Sends a special crafted HTTP POST request and checks the
+  response.
+Details:
+Drupal Core SQLi Vulnerability (SA-CORE-2014-005) - Active Check
+(OID: 1.3.6.1.4.1.25623.1.0.105101)
+Version used: 2022-04-14T11:24:11Z
+","","","DFN-CERT-2014-1369,DFN-CERT-2014-0958,CB-K14/1301,CB-K14/0920",""
+192.168.56.104,,9443,tcp,7.5,High,"VendorFix","Drupal Core SQLi Vulnerability (SA-CORE-2014-005) - Active Check","Drupal is prone to an SQL injection (SQLi) vulnerability.","Vulnerable URL: https://192.168.56.104:9443/drupal/?q=node&destination=node
+",1.3.6.1.4.1.25623.1.0.105101,"CVE-2014-3704",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,69fe7538-8be0-4313-9494-6925745193b1,"Exploiting this issue could allow an attacker to execute
+  arbitrary code, to gain elevated privileges and to compromise the application, access or modify
+  data, or exploit latent vulnerabilities in the underlying database.","Updates are available. Please see the references for more
+  information.","Drupal 7.x versions prior to 7.32 are vulnerable.","Drupal fails to sufficiently sanitize user-supplied data before
+  using it in an SQL query.","Sends a special crafted HTTP POST request and checks the
+  response.
+Details:
+Drupal Core SQLi Vulnerability (SA-CORE-2014-005) - Active Check
+(OID: 1.3.6.1.4.1.25623.1.0.105101)
+Version used: 2022-04-14T11:24:11Z
+","","","DFN-CERT-2014-1369,DFN-CERT-2014-0958,CB-K14/1301,CB-K14/0920",""
+192.168.56.104,,8080,tcp,7.5,High,"VendorFix","Drupal Core SQLi Vulnerability (SA-CORE-2014-005) - Active Check","Drupal is prone to an SQL injection (SQLi) vulnerability.","Vulnerable URL: http://192.168.56.104:8080/drupal/?q=node&destination=node
+",1.3.6.1.4.1.25623.1.0.105101,"CVE-2014-3704",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,cee3416d-a052-476b-9c52-f570acfb42fd,"Exploiting this issue could allow an attacker to execute
+  arbitrary code, to gain elevated privileges and to compromise the application, access or modify
+  data, or exploit latent vulnerabilities in the underlying database.","Updates are available. Please see the references for more
+  information.","Drupal 7.x versions prior to 7.32 are vulnerable.","Drupal fails to sufficiently sanitize user-supplied data before
+  using it in an SQL query.","Sends a special crafted HTTP POST request and checks the
+  response.
+Details:
+Drupal Core SQLi Vulnerability (SA-CORE-2014-005) - Active Check
+(OID: 1.3.6.1.4.1.25623.1.0.105101)
+Version used: 2022-04-14T11:24:11Z
+","","","DFN-CERT-2014-1369,DFN-CERT-2014-0958,CB-K14/1301,CB-K14/0920",""
+192.168.56.104,,443,tcp,7.5,High,"Workaround","phpinfo() output Reporting","Many PHP installation tutorials instruct the user to create
+  a file called phpinfo.php or similar containing the phpinfo() statement. Such a file is often
+  left back in the webserver directory.","The following files are calling the function phpinfo() which disclose potentially sensitive information:
+
+https://192.168.56.104/bWAPP/phpinfo.php
+",1.3.6.1.4.1.25623.1.0.11229,"",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,ada5c5d8-2246-4ab2-951a-1281a83361cc,"Some of the information that can be gathered from this file includes:
+
+  The username of the user running the PHP process, if it is a sudo user, the IP address of the host, the web server
+  version, the system version (Unix, Linux, Windows, ...), and the root directory of the web server.","Delete the listed files or restrict access to them.","","","
+Details:
+phpinfo() output Reporting
+(OID: 1.3.6.1.4.1.25623.1.0.11229)
+Version used: 2023-06-22T10:34:15Z
+","","","",""
+192.168.56.104,,80,tcp,7.5,High,"Workaround","phpinfo() output Reporting","Many PHP installation tutorials instruct the user to create
+  a file called phpinfo.php or similar containing the phpinfo() statement. Such a file is often
+  left back in the webserver directory.","The following files are calling the function phpinfo() which disclose potentially sensitive information:
+
+http://192.168.56.104/bWAPP/phpinfo.php
+",1.3.6.1.4.1.25623.1.0.11229,"",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,a9eecae7-e84b-4355-865e-1e89ce60a062,"Some of the information that can be gathered from this file includes:
+
+  The username of the user running the PHP process, if it is a sudo user, the IP address of the host, the web server
+  version, the system version (Unix, Linux, Windows, ...), and the root directory of the web server.","Delete the listed files or restrict access to them.","","","
+Details:
+phpinfo() output Reporting
+(OID: 1.3.6.1.4.1.25623.1.0.11229)
+Version used: 2023-06-22T10:34:15Z
+","","","",""
+192.168.56.104,,514,tcp,7.5,High,"Mitigation","rsh Unencrypted Cleartext Login","This remote host is running a rsh service.","The rsh service is not allowing connections from this host.
+",1.3.6.1.4.1.25623.1.0.100080,"CVE-1999-0651",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,13a8fc86-7a9d-497c-bdce-6918fb366812,"","Disable the rsh service and use alternatives like SSH
+  instead.","","rsh (remote shell) is a command line computer program which can
+  execute shell commands as another user, and on another computer across a computer network.
+
+  Remark: NIST don't see 'configuration issues' as software flaws so the referenced CVE has a
+  severity of 0.0. The severity of this VT has been raised by Greenbone to still report a
+  configuration issue on the target.","
+Details:
+rsh Unencrypted Cleartext Login
+(OID: 1.3.6.1.4.1.25623.1.0.100080)
+Version used: 2021-10-20T09:03:29Z
+","","","",""
+192.168.56.104,,443,tcp,7.5,High,"Mitigation","SSL/TLS: Report Vulnerable Cipher Suites for HTTPS","This routine reports all SSL/TLS cipher suites accepted by a service
+  where attack vectors exists only on HTTPS services.","'Vulnerable' cipher suites accepted by this service via the SSLv3 protocol:
+
+TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (SWEET32)
+TLS_DHE_RSA_WITH_DES_CBC_SHA (SWEET32)
+TLS_RSA_WITH_3DES_EDE_CBC_SHA (SWEET32)
+TLS_RSA_WITH_DES_CBC_SHA (SWEET32)
+
+'Vulnerable' cipher suites accepted by this service via the TLSv1.0 protocol:
+
+TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (SWEET32)
+TLS_DHE_RSA_WITH_DES_CBC_SHA (SWEET32)
+TLS_RSA_WITH_3DES_EDE_CBC_SHA (SWEET32)
+TLS_RSA_WITH_DES_CBC_SHA (SWEET32)
+
+
+",1.3.6.1.4.1.25623.1.0.108031,"CVE-2016-2183,CVE-2016-6329,CVE-2020-12872",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,9ea3d2f8-8224-44e4-a558-e5d28a6f08c1,"","The configuration of this services should be changed so
+  that it does not accept the listed cipher suites anymore.
+
+  Please see the references for more resources supporting you with this task.","Services accepting vulnerable SSL/TLS cipher suites via HTTPS.","These rules are applied for the evaluation of the vulnerable cipher suites:
+
+  - 64-bit block cipher 3DES vulnerable to the SWEET32 attack (CVE-2016-2183).","
+Details:
+SSL/TLS: Report Vulnerable Cipher Suites for HTTPS
+(OID: 1.3.6.1.4.1.25623.1.0.108031)
+Version used: 2022-08-01T10:11:45Z
+","","","DFN-CERT-2021-1618,DFN-CERT-2021-0775,DFN-CERT-2021-0770,DFN-CERT-2021-0274,DFN-CERT-2020-2141,DFN-CERT-2020-0368,DFN-CERT-2019-1455,DFN-CERT-2019-0068,DFN-CERT-2018-1296,DFN-CERT-2018-0323,DFN-CERT-2017-2070,DFN-CERT-2017-1954,DFN-CERT-2017-1885,DFN-CERT-2017-1831,DFN-CERT-2017-1821,DFN-CERT-2017-1785,DFN-CERT-2017-1626,DFN-CERT-2017-1326,DFN-CERT-2017-1239,DFN-CERT-2017-1238,DFN-CERT-2017-1090,DFN-CERT-2017-1060,DFN-CERT-2017-0968,DFN-CERT-2017-0947,DFN-CERT-2017-0946,DFN-CERT-2017-0904,DFN-CERT-2017-0816,DFN-CERT-2017-0746,DFN-CERT-2017-0677,DFN-CERT-2017-0675,DFN-CERT-2017-0611,DFN-CERT-2017-0609,DFN-CERT-2017-0522,DFN-CERT-2017-0519,DFN-CERT-2017-0482,DFN-CERT-2017-0351,DFN-CERT-2017-0090,DFN-CERT-2017-0089,DFN-CERT-2017-0088,DFN-CERT-2017-0086,DFN-CERT-2016-1943,DFN-CERT-2016-1937,DFN-CERT-2016-1732,DFN-CERT-2016-1726,DFN-CERT-2016-1715,DFN-CERT-2016-1714,DFN-CERT-2016-1588,DFN-CERT-2016-1555,DFN-CERT-2016-1391,DFN-CERT-2016-1378,WID-SEC-2022-2226,WID-SEC-2022-1955,CB-K21/1094,CB-K20/1023,CB-K20/0321,CB-K20/0314,CB-K20/0157,CB-K19/0618,CB-K19/0615,CB-K18/0296,CB-K17/1980,CB-K17/1871,CB-K17/1803,CB-K17/1753,CB-K17/1750,CB-K17/1709,CB-K17/1558,CB-K17/1273,CB-K17/1202,CB-K17/1196,CB-K17/1055,CB-K17/1026,CB-K17/0939,CB-K17/0917,CB-K17/0915,CB-K17/0877,CB-K17/0796,CB-K17/0724,CB-K17/0661,CB-K17/0657,CB-K17/0582,CB-K17/0581,CB-K17/0506,CB-K17/0504,CB-K17/0467,CB-K17/0345,CB-K17/0098,CB-K17/0089,CB-K17/0086,CB-K17/0082,CB-K16/1837,CB-K16/1830,CB-K16/1635,CB-K16/1630,CB-K16/1624,CB-K16/1622,CB-K16/1500,CB-K16/1465,CB-K16/1307,CB-K16/1296",""
+192.168.56.104,,9443,tcp,7.5,High,"Mitigation","SSL/TLS: Report Vulnerable Cipher Suites for HTTPS","This routine reports all SSL/TLS cipher suites accepted by a service
+  where attack vectors exists only on HTTPS services.","'Vulnerable' cipher suites accepted by this service via the SSLv3 protocol:
+
+TLS_RSA_WITH_3DES_EDE_CBC_SHA (SWEET32)
+TLS_RSA_WITH_DES_CBC_SHA (SWEET32)
+
+'Vulnerable' cipher suites accepted by this service via the TLSv1.0 protocol:
+
+TLS_RSA_WITH_3DES_EDE_CBC_SHA (SWEET32)
+TLS_RSA_WITH_DES_CBC_SHA (SWEET32)
+
+
+",1.3.6.1.4.1.25623.1.0.108031,"CVE-2016-2183,CVE-2016-6329,CVE-2020-12872",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,894c7126-716c-450e-8670-bccc47c23294,"","The configuration of this services should be changed so
+  that it does not accept the listed cipher suites anymore.
+
+  Please see the references for more resources supporting you with this task.","Services accepting vulnerable SSL/TLS cipher suites via HTTPS.","These rules are applied for the evaluation of the vulnerable cipher suites:
+
+  - 64-bit block cipher 3DES vulnerable to the SWEET32 attack (CVE-2016-2183).","
+Details:
+SSL/TLS: Report Vulnerable Cipher Suites for HTTPS
+(OID: 1.3.6.1.4.1.25623.1.0.108031)
+Version used: 2022-08-01T10:11:45Z
+","","","DFN-CERT-2021-1618,DFN-CERT-2021-0775,DFN-CERT-2021-0770,DFN-CERT-2021-0274,DFN-CERT-2020-2141,DFN-CERT-2020-0368,DFN-CERT-2019-1455,DFN-CERT-2019-0068,DFN-CERT-2018-1296,DFN-CERT-2018-0323,DFN-CERT-2017-2070,DFN-CERT-2017-1954,DFN-CERT-2017-1885,DFN-CERT-2017-1831,DFN-CERT-2017-1821,DFN-CERT-2017-1785,DFN-CERT-2017-1626,DFN-CERT-2017-1326,DFN-CERT-2017-1239,DFN-CERT-2017-1238,DFN-CERT-2017-1090,DFN-CERT-2017-1060,DFN-CERT-2017-0968,DFN-CERT-2017-0947,DFN-CERT-2017-0946,DFN-CERT-2017-0904,DFN-CERT-2017-0816,DFN-CERT-2017-0746,DFN-CERT-2017-0677,DFN-CERT-2017-0675,DFN-CERT-2017-0611,DFN-CERT-2017-0609,DFN-CERT-2017-0522,DFN-CERT-2017-0519,DFN-CERT-2017-0482,DFN-CERT-2017-0351,DFN-CERT-2017-0090,DFN-CERT-2017-0089,DFN-CERT-2017-0088,DFN-CERT-2017-0086,DFN-CERT-2016-1943,DFN-CERT-2016-1937,DFN-CERT-2016-1732,DFN-CERT-2016-1726,DFN-CERT-2016-1715,DFN-CERT-2016-1714,DFN-CERT-2016-1588,DFN-CERT-2016-1555,DFN-CERT-2016-1391,DFN-CERT-2016-1378,WID-SEC-2022-2226,WID-SEC-2022-1955,CB-K21/1094,CB-K20/1023,CB-K20/0321,CB-K20/0314,CB-K20/0157,CB-K19/0618,CB-K19/0615,CB-K18/0296,CB-K17/1980,CB-K17/1871,CB-K17/1803,CB-K17/1753,CB-K17/1750,CB-K17/1709,CB-K17/1558,CB-K17/1273,CB-K17/1202,CB-K17/1196,CB-K17/1055,CB-K17/1026,CB-K17/0939,CB-K17/0917,CB-K17/0915,CB-K17/0877,CB-K17/0796,CB-K17/0724,CB-K17/0661,CB-K17/0657,CB-K17/0582,CB-K17/0581,CB-K17/0506,CB-K17/0504,CB-K17/0467,CB-K17/0345,CB-K17/0098,CB-K17/0089,CB-K17/0086,CB-K17/0082,CB-K16/1837,CB-K16/1830,CB-K16/1635,CB-K16/1630,CB-K16/1624,CB-K16/1622,CB-K16/1500,CB-K16/1465,CB-K16/1307,CB-K16/1296",""
+192.168.56.104,,8443,tcp,7.4,High,"VendorFix","SSL/TLS: OpenSSL CCS Man in the Middle Security Bypass Vulnerability","OpenSSL is prone to security-bypass vulnerability.","Vulnerability was detected according to the Vulnerability Detection Method.",1.3.6.1.4.1.25623.1.0.105042,"CVE-2014-0224",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,fd17784e-6fa1-4b0e-a545-f09de9be4a7a,"Successfully exploiting this issue may allow attackers to obtain
+  sensitive information by conducting a man-in-the-middle attack. This may lead to other attacks.","Updates are available. Please see the references for more information.","OpenSSL before 0.9.8za, 1.0.0 before 1.0.0m and 1.0.1 before 1.0.1h.","OpenSSL does not properly restrict processing of ChangeCipherSpec
+  messages, which allows man-in-the-middle attackers to trigger use of a zero-length master key in
+  certain OpenSSL-to-OpenSSL communications, and consequently hijack sessions or obtain sensitive
+  information, via a crafted TLS handshake, aka the 'CCS Injection' vulnerability.","Send two SSL ChangeCipherSpec request and check the response.
+Details:
+SSL/TLS: OpenSSL CCS Man in the Middle Security Bypass Vulnerability
+(OID: 1.3.6.1.4.1.25623.1.0.105042)
+Version used: 2022-04-14T11:24:11Z
+","","","DFN-CERT-2016-0388,DFN-CERT-2015-0593,DFN-CERT-2015-0427,DFN-CERT-2015-0396,DFN-CERT-2015-0082,DFN-CERT-2015-0079,DFN-CERT-2015-0078,DFN-CERT-2014-1717,DFN-CERT-2014-1632,DFN-CERT-2014-1364,DFN-CERT-2014-1357,DFN-CERT-2014-1350,DFN-CERT-2014-1265,DFN-CERT-2014-1209,DFN-CERT-2014-0917,DFN-CERT-2014-0789,DFN-CERT-2014-0778,DFN-CERT-2014-0768,DFN-CERT-2014-0752,DFN-CERT-2014-0747,DFN-CERT-2014-0738,DFN-CERT-2014-0715,DFN-CERT-2014-0714,DFN-CERT-2014-0709,WID-SEC-2023-0500,CB-K15/0567,CB-K15/0415,CB-K15/0384,CB-K15/0080,CB-K15/0079,CB-K15/0074,CB-K14/1617,CB-K14/1537,CB-K14/1299,CB-K14/1297,CB-K14/1294,CB-K14/1202,CB-K14/1174,CB-K14/1153,CB-K14/0876,CB-K14/0756,CB-K14/0746,CB-K14/0736,CB-K14/0722,CB-K14/0716,CB-K14/0708,CB-K14/0684,CB-K14/0683,CB-K14/0680",""
+192.168.56.104,,25,tcp,6.8,Medium,"VendorFix","Multiple Vendors STARTTLS Implementation Plaintext Arbitrary Command Injection Vulnerability","Multiple vendors' implementations of 'STARTTLS' are prone to a
+  vulnerability that lets attackers inject arbitrary commands.","Vulnerability was detected according to the Vulnerability Detection Method.",1.3.6.1.4.1.25623.1.0.103935,"CVE-2011-0411,CVE-2011-1430,CVE-2011-1431,CVE-2011-1432,CVE-2011-1506,CVE-2011-1575,CVE-2011-1926,CVE-2011-2165",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,1adf0fc1-bb98-46a4-acd5-8060647ff3d5,"An attacker can exploit this issue to execute arbitrary commands
+  in the context of the user running the application. Successful exploits can allow attackers to
+  obtain email usernames and passwords.","Updates are available. Please see the references for more
+  information.","The following vendors are known to be affected:
+
+  Ipswitch
+
+  Kerio
+
+  Postfix
+
+  Qmail-TLS
+
+  Oracle
+
+  SCO Group
+
+  spamdyke
+
+  ISC","","Send a special crafted 'STARTTLS' request and check the
+  response.
+Details:
+Multiple Vendors STARTTLS Implementation Plaintext Arbitrary Command Injecti...
+(OID: 1.3.6.1.4.1.25623.1.0.103935)
+Version used: 2022-04-14T11:24:11Z
+","","","DFN-CERT-2011-0917,DFN-CERT-2011-0912,DFN-CERT-2011-0897,DFN-CERT-2011-0844,DFN-CERT-2011-0818,DFN-CERT-2011-0808,DFN-CERT-2011-0771,DFN-CERT-2011-0741,DFN-CERT-2011-0712,DFN-CERT-2011-0673,DFN-CERT-2011-0597,DFN-CERT-2011-0596,DFN-CERT-2011-0519,DFN-CERT-2011-0516,DFN-CERT-2011-0483,DFN-CERT-2011-0434,DFN-CERT-2011-0393,DFN-CERT-2011-0381,CB-K15/1514",""
+192.168.56.104,,21,tcp,6.4,Medium,"Mitigation","Anonymous FTP Login Reporting","Reports if the remote FTP Server allows anonymous logins.","It was possible to login to the remote FTP service with the following anonymous account(s):
+
+anonymous:anonymous@example.com
+ftp:anonymous@example.com
+
+Here are the contents of the remote FTP directory listing:
+
+Account ""anonymous"":
+
+-rw-rw-r--   1 root     www-data   543803 Nov  2  2014 Iron_Man.pdf
+-rw-rw-r--   1 root     www-data   462949 Nov  2  2014 Terminator_Salvation.pdf
+-rw-rw-r--   1 root     www-data   544600 Nov  2  2014 The_Amazing_Spider-Man.pdf
+-rw-rw-r--   1 root     www-data   526187 Nov  2  2014 The_Cabin_in_the_Woods.pdf
+-rw-rw-r--   1 root     www-data   756522 Nov  2  2014 The_Dark_Knight_Rises.pdf
+-rw-rw-r--   1 root     www-data   618117 Nov  2  2014 The_Incredible_Hulk.pdf
+-rw-rw-r--   1 root     www-data  5010042 Nov  2  2014 bWAPP_intro.pdf
+
+Account ""ftp"":
+
+-rw-rw-r--   1 root     www-data   543803 Nov  2  2014 Iron_Man.pdf
+-rw-rw-r--   1 root     www-data   462949 Nov  2  2014 Terminator_Salvation.pdf
+-rw-rw-r--   1 root     www-data   544600 Nov  2  2014 The_Amazing_Spider-Man.pdf
+-rw-rw-r--   1 root     www-data   526187 Nov  2  2014 The_Cabin_in_the_Woods.pdf
+-rw-rw-r--   1 root     www-data   756522 Nov  2  2014 The_Dark_Knight_Rises.pdf
+-rw-rw-r--   1 root     www-data   618117 Nov  2  2014 The_Incredible_Hulk.pdf
+-rw-rw-r--   1 root     www-data  5010042 Nov  2  2014 bWAPP_intro.pdf
+
+",1.3.6.1.4.1.25623.1.0.900600,"CVE-1999-0497",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,849db519-4bc7-4b46-a08e-8d1a58744e1d,"Based on the files accessible via this anonymous FTP login and
+  the permissions of this account an attacker might be able to:
+
+  - gain access to sensitive files
+
+  - upload or delete files.","If you do not want to share files, you should disable anonymous
+  logins.","","A host that provides an FTP service may additionally provide
+  Anonymous FTP access as well. Under this arrangement, users do not strictly need an account on the
+  host. Instead the user typically enters 'anonymous' or 'ftp' when prompted for username. Although
+  users are commonly asked to send their email address as their password, little to no verification
+  is actually performed on the supplied data.
+
+  Remark: NIST don't see 'configuration issues' as software flaws so the referenced CVE has a
+  severity of 0.0. The severity of this VT has been raised by Greenbone to still report a
+  configuration issue on the target.","
+Details:
+Anonymous FTP Login Reporting
+(OID: 1.3.6.1.4.1.25623.1.0.900600)
+Version used: 2021-10-20T09:03:29Z
+","","","",""
+192.168.56.104,,443,tcp,5.9,Medium,"Mitigation","SSL/TLS: Deprecated SSLv2 and SSLv3 Protocol Detection","It was possible to detect the usage of the deprecated SSLv2
+  and/or SSLv3 protocol on this system.","In addition to TLSv1.0+ the service is also providing the deprecated SSLv2 and SSLv3 protocols and supports one or more ciphers. Those supported ciphers can be found in the 'SSL/TLS: Report Supported Cipher Suites' (OID: 1.3.6.1.4.1.25623.1.0.802067) VT.
+",1.3.6.1.4.1.25623.1.0.111012,"CVE-2016-0800,CVE-2014-3566",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,e04f2453-3138-4980-a24d-412ce231d0f9,"An attacker might be able to use the known cryptographic flaws to
+  eavesdrop the connection between clients and the service to get access to sensitive data
+  transferred within the secured connection.
+
+  Furthermore newly uncovered vulnerabilities in this protocols won't receive security updates
+  anymore.","It is recommended to disable the deprecated SSLv2 and/or SSLv3
+  protocols in favor of the TLSv1.2+ protocols. Please see the references for more information.","All services providing an encrypted communication using the
+  SSLv2 and/or SSLv3 protocols.","The SSLv2 and SSLv3 protocols contain known cryptographic
+  flaws like:
+
+  - CVE-2014-3566: Padding Oracle On Downgraded Legacy Encryption (POODLE)
+
+  - CVE-2016-0800: Decrypting RSA with Obsolete and Weakened eNcryption (DROWN)","Check the used SSL protocols of the services provided by this
+  system.
+Details:
+SSL/TLS: Deprecated SSLv2 and SSLv3 Protocol Detection
+(OID: 1.3.6.1.4.1.25623.1.0.111012)
+Version used: 2021-10-15T12:51:02Z
+","","","DFN-CERT-2018-0096,DFN-CERT-2017-1238,DFN-CERT-2017-1236,DFN-CERT-2016-1929,DFN-CERT-2016-1527,DFN-CERT-2016-1468,DFN-CERT-2016-1216,DFN-CERT-2016-1174,DFN-CERT-2016-1168,DFN-CERT-2016-0884,DFN-CERT-2016-0841,DFN-CERT-2016-0644,DFN-CERT-2016-0642,DFN-CERT-2016-0496,DFN-CERT-2016-0495,DFN-CERT-2016-0465,DFN-CERT-2016-0459,DFN-CERT-2016-0453,DFN-CERT-2016-0451,DFN-CERT-2016-0415,DFN-CERT-2016-0403,DFN-CERT-2016-0388,DFN-CERT-2016-0360,DFN-CERT-2016-0359,DFN-CERT-2016-0357,DFN-CERT-2016-0171,DFN-CERT-2015-1431,DFN-CERT-2015-1075,DFN-CERT-2015-1026,DFN-CERT-2015-0664,DFN-CERT-2015-0548,DFN-CERT-2015-0404,DFN-CERT-2015-0396,DFN-CERT-2015-0259,DFN-CERT-2015-0254,DFN-CERT-2015-0245,DFN-CERT-2015-0118,DFN-CERT-2015-0114,DFN-CERT-2015-0083,DFN-CERT-2015-0082,DFN-CERT-2015-0081,DFN-CERT-2015-0076,DFN-CERT-2014-1717,DFN-CERT-2014-1680,DFN-CERT-2014-1632,DFN-CERT-2014-1564,DFN-CERT-2014-1542,DFN-CERT-2014-1414,DFN-CERT-2014-1366,DFN-CERT-2014-1354,WID-SEC-2023-0431,WID-SEC-2023-0427,CB-K18/0094,CB-K17/1198,CB-K17/1196,CB-K16/1828,CB-K16/1438,CB-K16/1384,CB-K16/1141,CB-K16/1107,CB-K16/1102,CB-K16/0792,CB-K16/0599,CB-K16/0597,CB-K16/0459,CB-K16/0456,CB-K16/0433,CB-K16/0424,CB-K16/0415,CB-K16/0413,CB-K16/0374,CB-K16/0367,CB-K16/0331,CB-K16/0329,CB-K16/0328,CB-K16/0156,CB-K15/1514,CB-K15/1358,CB-K15/1021,CB-K15/0972,CB-K15/0637,CB-K15/0590,CB-K15/0525,CB-K15/0393,CB-K15/0384,CB-K15/0287,CB-K15/0252,CB-K15/0246,CB-K15/0237,CB-K15/0118,CB-K15/0110,CB-K15/0108,CB-K15/0080,CB-K15/0078,CB-K15/0077,CB-K15/0075,CB-K14/1617,CB-K14/1581,CB-K14/1537,CB-K14/1479,CB-K14/1458,CB-K14/1342,CB-K14/1314,CB-K14/1313,CB-K14/1311,CB-K14/1304,CB-K14/1296",""
+192.168.56.104,,8443,tcp,5.9,Medium,"Mitigation","SSL/TLS: Deprecated SSLv2 and SSLv3 Protocol Detection","It was possible to detect the usage of the deprecated SSLv2
+  and/or SSLv3 protocol on this system.","In addition to TLSv1.0+ the service is also providing the deprecated SSLv3 protocol and supports one or more ciphers. Those supported ciphers can be found in the 'SSL/TLS: Report Supported Cipher Suites' (OID: 1.3.6.1.4.1.25623.1.0.802067) VT.
+",1.3.6.1.4.1.25623.1.0.111012,"CVE-2016-0800,CVE-2014-3566",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,4c8ab966-b071-4c1d-a7eb-5669fdc9653a,"An attacker might be able to use the known cryptographic flaws to
+  eavesdrop the connection between clients and the service to get access to sensitive data
+  transferred within the secured connection.
+
+  Furthermore newly uncovered vulnerabilities in this protocols won't receive security updates
+  anymore.","It is recommended to disable the deprecated SSLv2 and/or SSLv3
+  protocols in favor of the TLSv1.2+ protocols. Please see the references for more information.","All services providing an encrypted communication using the
+  SSLv2 and/or SSLv3 protocols.","The SSLv2 and SSLv3 protocols contain known cryptographic
+  flaws like:
+
+  - CVE-2014-3566: Padding Oracle On Downgraded Legacy Encryption (POODLE)
+
+  - CVE-2016-0800: Decrypting RSA with Obsolete and Weakened eNcryption (DROWN)","Check the used SSL protocols of the services provided by this
+  system.
+Details:
+SSL/TLS: Deprecated SSLv2 and SSLv3 Protocol Detection
+(OID: 1.3.6.1.4.1.25623.1.0.111012)
+Version used: 2021-10-15T12:51:02Z
+","","","DFN-CERT-2018-0096,DFN-CERT-2017-1238,DFN-CERT-2017-1236,DFN-CERT-2016-1929,DFN-CERT-2016-1527,DFN-CERT-2016-1468,DFN-CERT-2016-1216,DFN-CERT-2016-1174,DFN-CERT-2016-1168,DFN-CERT-2016-0884,DFN-CERT-2016-0841,DFN-CERT-2016-0644,DFN-CERT-2016-0642,DFN-CERT-2016-0496,DFN-CERT-2016-0495,DFN-CERT-2016-0465,DFN-CERT-2016-0459,DFN-CERT-2016-0453,DFN-CERT-2016-0451,DFN-CERT-2016-0415,DFN-CERT-2016-0403,DFN-CERT-2016-0388,DFN-CERT-2016-0360,DFN-CERT-2016-0359,DFN-CERT-2016-0357,DFN-CERT-2016-0171,DFN-CERT-2015-1431,DFN-CERT-2015-1075,DFN-CERT-2015-1026,DFN-CERT-2015-0664,DFN-CERT-2015-0548,DFN-CERT-2015-0404,DFN-CERT-2015-0396,DFN-CERT-2015-0259,DFN-CERT-2015-0254,DFN-CERT-2015-0245,DFN-CERT-2015-0118,DFN-CERT-2015-0114,DFN-CERT-2015-0083,DFN-CERT-2015-0082,DFN-CERT-2015-0081,DFN-CERT-2015-0076,DFN-CERT-2014-1717,DFN-CERT-2014-1680,DFN-CERT-2014-1632,DFN-CERT-2014-1564,DFN-CERT-2014-1542,DFN-CERT-2014-1414,DFN-CERT-2014-1366,DFN-CERT-2014-1354,WID-SEC-2023-0431,WID-SEC-2023-0427,CB-K18/0094,CB-K17/1198,CB-K17/1196,CB-K16/1828,CB-K16/1438,CB-K16/1384,CB-K16/1141,CB-K16/1107,CB-K16/1102,CB-K16/0792,CB-K16/0599,CB-K16/0597,CB-K16/0459,CB-K16/0456,CB-K16/0433,CB-K16/0424,CB-K16/0415,CB-K16/0413,CB-K16/0374,CB-K16/0367,CB-K16/0331,CB-K16/0329,CB-K16/0328,CB-K16/0156,CB-K15/1514,CB-K15/1358,CB-K15/1021,CB-K15/0972,CB-K15/0637,CB-K15/0590,CB-K15/0525,CB-K15/0393,CB-K15/0384,CB-K15/0287,CB-K15/0252,CB-K15/0246,CB-K15/0237,CB-K15/0118,CB-K15/0110,CB-K15/0108,CB-K15/0080,CB-K15/0078,CB-K15/0077,CB-K15/0075,CB-K14/1617,CB-K14/1581,CB-K14/1537,CB-K14/1479,CB-K14/1458,CB-K14/1342,CB-K14/1314,CB-K14/1313,CB-K14/1311,CB-K14/1304,CB-K14/1296",""
+192.168.56.104,,9443,tcp,5.9,Medium,"Mitigation","SSL/TLS: Deprecated SSLv2 and SSLv3 Protocol Detection","It was possible to detect the usage of the deprecated SSLv2
+  and/or SSLv3 protocol on this system.","In addition to TLSv1.0+ the service is also providing the deprecated SSLv2 and SSLv3 protocols and supports one or more ciphers. Those supported ciphers can be found in the 'SSL/TLS: Report Supported Cipher Suites' (OID: 1.3.6.1.4.1.25623.1.0.802067) VT.
+",1.3.6.1.4.1.25623.1.0.111012,"CVE-2016-0800,CVE-2014-3566",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,c2ea6790-66bb-4924-9c54-9982f60fc37a,"An attacker might be able to use the known cryptographic flaws to
+  eavesdrop the connection between clients and the service to get access to sensitive data
+  transferred within the secured connection.
+
+  Furthermore newly uncovered vulnerabilities in this protocols won't receive security updates
+  anymore.","It is recommended to disable the deprecated SSLv2 and/or SSLv3
+  protocols in favor of the TLSv1.2+ protocols. Please see the references for more information.","All services providing an encrypted communication using the
+  SSLv2 and/or SSLv3 protocols.","The SSLv2 and SSLv3 protocols contain known cryptographic
+  flaws like:
+
+  - CVE-2014-3566: Padding Oracle On Downgraded Legacy Encryption (POODLE)
+
+  - CVE-2016-0800: Decrypting RSA with Obsolete and Weakened eNcryption (DROWN)","Check the used SSL protocols of the services provided by this
+  system.
+Details:
+SSL/TLS: Deprecated SSLv2 and SSLv3 Protocol Detection
+(OID: 1.3.6.1.4.1.25623.1.0.111012)
+Version used: 2021-10-15T12:51:02Z
+","","","DFN-CERT-2018-0096,DFN-CERT-2017-1238,DFN-CERT-2017-1236,DFN-CERT-2016-1929,DFN-CERT-2016-1527,DFN-CERT-2016-1468,DFN-CERT-2016-1216,DFN-CERT-2016-1174,DFN-CERT-2016-1168,DFN-CERT-2016-0884,DFN-CERT-2016-0841,DFN-CERT-2016-0644,DFN-CERT-2016-0642,DFN-CERT-2016-0496,DFN-CERT-2016-0495,DFN-CERT-2016-0465,DFN-CERT-2016-0459,DFN-CERT-2016-0453,DFN-CERT-2016-0451,DFN-CERT-2016-0415,DFN-CERT-2016-0403,DFN-CERT-2016-0388,DFN-CERT-2016-0360,DFN-CERT-2016-0359,DFN-CERT-2016-0357,DFN-CERT-2016-0171,DFN-CERT-2015-1431,DFN-CERT-2015-1075,DFN-CERT-2015-1026,DFN-CERT-2015-0664,DFN-CERT-2015-0548,DFN-CERT-2015-0404,DFN-CERT-2015-0396,DFN-CERT-2015-0259,DFN-CERT-2015-0254,DFN-CERT-2015-0245,DFN-CERT-2015-0118,DFN-CERT-2015-0114,DFN-CERT-2015-0083,DFN-CERT-2015-0082,DFN-CERT-2015-0081,DFN-CERT-2015-0076,DFN-CERT-2014-1717,DFN-CERT-2014-1680,DFN-CERT-2014-1632,DFN-CERT-2014-1564,DFN-CERT-2014-1542,DFN-CERT-2014-1414,DFN-CERT-2014-1366,DFN-CERT-2014-1354,WID-SEC-2023-0431,WID-SEC-2023-0427,CB-K18/0094,CB-K17/1198,CB-K17/1196,CB-K16/1828,CB-K16/1438,CB-K16/1384,CB-K16/1141,CB-K16/1107,CB-K16/1102,CB-K16/0792,CB-K16/0599,CB-K16/0597,CB-K16/0459,CB-K16/0456,CB-K16/0433,CB-K16/0424,CB-K16/0415,CB-K16/0413,CB-K16/0374,CB-K16/0367,CB-K16/0331,CB-K16/0329,CB-K16/0328,CB-K16/0156,CB-K15/1514,CB-K15/1358,CB-K15/1021,CB-K15/0972,CB-K15/0637,CB-K15/0590,CB-K15/0525,CB-K15/0393,CB-K15/0384,CB-K15/0287,CB-K15/0252,CB-K15/0246,CB-K15/0237,CB-K15/0118,CB-K15/0110,CB-K15/0108,CB-K15/0080,CB-K15/0078,CB-K15/0077,CB-K15/0075,CB-K14/1617,CB-K14/1581,CB-K14/1537,CB-K14/1479,CB-K14/1458,CB-K14/1342,CB-K14/1314,CB-K14/1313,CB-K14/1311,CB-K14/1304,CB-K14/1296",""
+192.168.56.104,,80,tcp,5.8,Medium,"Mitigation","HTTP Debugging Methods (TRACE/TRACK) Enabled","The remote web server supports the TRACE and/or TRACK
+  methods. TRACE and TRACK are HTTP methods which are used to debug web server connections.","The web server has the following HTTP methods enabled: TRACE
+",1.3.6.1.4.1.25623.1.0.11213,"CVE-2003-1567,CVE-2004-2320,CVE-2004-2763,CVE-2005-3398,CVE-2006-4683,CVE-2007-3008,CVE-2008-7253,CVE-2009-2823,CVE-2010-0386,CVE-2012-2223,CVE-2014-7883",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,a60b77f4-1525-4fbb-b5d5-99e53a25d100,"An attacker may use this flaw to trick your legitimate web
+  users to give him their credentials.","Disable the TRACE and TRACK methods in your web server
+  configuration.
+
+  Please see the manual of your web server or the references for more information.","Web servers with enabled TRACE and/or TRACK methods.","It has been shown that web servers supporting this methods
+  are subject to cross-site-scripting attacks, dubbed XST for Cross-Site-Tracing, when used in
+  conjunction with various weaknesses in browsers.","Checks if HTTP methods such as TRACE and TRACK are
+  enabled and can be used.
+Details:
+HTTP Debugging Methods (TRACE/TRACK) Enabled
+(OID: 1.3.6.1.4.1.25623.1.0.11213)
+Version used: 2022-05-12T09:32:01Z
+","","","DFN-CERT-2021-1825,DFN-CERT-2014-1018,DFN-CERT-2010-0020,CB-K14/0981",""
+192.168.56.104,,443,tcp,5.8,Medium,"Mitigation","HTTP Debugging Methods (TRACE/TRACK) Enabled","The remote web server supports the TRACE and/or TRACK
+  methods. TRACE and TRACK are HTTP methods which are used to debug web server connections.","The web server has the following HTTP methods enabled: TRACE
+",1.3.6.1.4.1.25623.1.0.11213,"CVE-2003-1567,CVE-2004-2320,CVE-2004-2763,CVE-2005-3398,CVE-2006-4683,CVE-2007-3008,CVE-2008-7253,CVE-2009-2823,CVE-2010-0386,CVE-2012-2223,CVE-2014-7883",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,62c0466c-9dd7-4917-af95-f157619f1b46,"An attacker may use this flaw to trick your legitimate web
+  users to give him their credentials.","Disable the TRACE and TRACK methods in your web server
+  configuration.
+
+  Please see the manual of your web server or the references for more information.","Web servers with enabled TRACE and/or TRACK methods.","It has been shown that web servers supporting this methods
+  are subject to cross-site-scripting attacks, dubbed XST for Cross-Site-Tracing, when used in
+  conjunction with various weaknesses in browsers.","Checks if HTTP methods such as TRACE and TRACK are
+  enabled and can be used.
+Details:
+HTTP Debugging Methods (TRACE/TRACK) Enabled
+(OID: 1.3.6.1.4.1.25623.1.0.11213)
+Version used: 2022-05-12T09:32:01Z
+","","","DFN-CERT-2021-1825,DFN-CERT-2014-1018,DFN-CERT-2010-0020,CB-K14/0981",""
+192.168.56.104,,8443,tcp,5.3,Medium,"Mitigation","SSL/TLS: Server Certificate / Certificate in Chain with RSA keys less than 2048 bits","The remote SSL/TLS server certificate and/or any of the
+  certificates in the certificate chain is using a RSA key with less than 2048 bits.","The remote SSL/TLS server is using the following certificate(s) with a RSA key with less than 2048 bits (public-key-size:public-key-algorithm:serial:issuer):
+
+1024:RSA:00D8BD254AB15C9F5B:1.2.840.113549.1.9.1=#627761707040697473656367616D65732E636F6D,CN=bee-box.bwapp.local,OU=IT,O=MME,L=Menen,ST=Flanders,C=BE (Server certificate)
+",1.3.6.1.4.1.25623.1.0.150710,"",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,8dc35204-010b-4050-903b-fec7d7b438a4,"Using certificates with weak RSA key size can lead to
+  unauthorized exposure of sensitive information.","Replace the certificate with a stronger key and reissue the
+  certificates it signed.","","SSL/TLS certificates using RSA keys with less than 2048 bits are
+  considered unsafe.","Checks the RSA keys size of the server certificate and all
+  certificates in chain for a size < 2048 bit.
+Details:
+SSL/TLS: Server Certificate / Certificate in Chain with RSA keys less than 2...
+(OID: 1.3.6.1.4.1.25623.1.0.150710)
+Version used: 2021-12-10T12:48:00Z
+","","","",""
+192.168.56.104,,22,tcp,5.3,Medium,"Mitigation","Weak Host Key Algorithm(s) (SSH)","The remote SSH server is configured to allow / support weak host
+  key algorithm(s).","The remote SSH server supports the following weak host key algorithm(s):
+
+host key algorithm | Description
+-----------------------------------------------------------------------------------------
+ssh-dss            | Digital Signature Algorithm (DSA) / Digital Signature Standard (DSS)
+",1.3.6.1.4.1.25623.1.0.117687,"",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,f9e98902-c7a6-4e43-9775-11fe76fe18bb,"","Disable the reported weak host key algorithm(s).","","","Checks the supported host key algorithms of the remote SSH
+  server.
+
+  Currently weak host key algorithms are defined as the following:
+
+  - ssh-dss: Digital Signature Algorithm (DSA) / Digital Signature Standard (DSS)
+Details:
+Weak Host Key Algorithm(s) (SSH)
+(OID: 1.3.6.1.4.1.25623.1.0.117687)
+Version used: 2021-11-24T06:31:19Z
+","","","",""
+192.168.56.104,,80,tcp,5.3,Medium,"Mitigation","Apache HTTP Server /server-status accessible (HTTP)","Requesting the URI /server-status provides information on the
+  server activity and performance.","Vulnerable URL: http://192.168.56.104/server-status
+",1.3.6.1.4.1.25623.1.0.10677,"CVE-2020-25073",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,7722aaf7-ef2a-4cf6-b8de-805e31403af3,"Requesting the URI /server-status gives throughout information
+  about the currently running Apache to an attacker.","'- If this feature is unused commenting out the appropriate
+  section in the web servers configuration is recommended
+
+  - If this feature is used restricting access to trusted clients is recommended
+
+  - If the FreedomBox software is running on the target update the software to a later version","'- All Apache installations with an enabled 'mod_status' module
+
+  - FreedomBox through 20.13","server-status is a Apache HTTP Server handler provided by the
+  'mod_status' module and used to retrieve the server's activity and performance.","Checks if the /server-status page of Apache is accessible.
+Details:
+Apache HTTP Server /server-status accessible (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.10677)
+Version used: 2022-01-13T16:09:14Z
+","","","",""
+192.168.56.104,,443,tcp,5.3,Medium,"Mitigation","Apache HTTP Server /server-status accessible (HTTP)","Requesting the URI /server-status provides information on the
+  server activity and performance.","Vulnerable URL: https://192.168.56.104/server-status
+",1.3.6.1.4.1.25623.1.0.10677,"CVE-2020-25073",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,70a57744-a192-4193-895a-f8697bba0d4e,"Requesting the URI /server-status gives throughout information
+  about the currently running Apache to an attacker.","'- If this feature is unused commenting out the appropriate
+  section in the web servers configuration is recommended
+
+  - If this feature is used restricting access to trusted clients is recommended
+
+  - If the FreedomBox software is running on the target update the software to a later version","'- All Apache installations with an enabled 'mod_status' module
+
+  - FreedomBox through 20.13","server-status is a Apache HTTP Server handler provided by the
+  'mod_status' module and used to retrieve the server's activity and performance.","Checks if the /server-status page of Apache is accessible.
+Details:
+Apache HTTP Server /server-status accessible (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.10677)
+Version used: 2022-01-13T16:09:14Z
+","","","",""
+192.168.56.104,,443,tcp,5.3,Medium,"Mitigation","SSL/TLS: Server Certificate / Certificate in Chain with RSA keys less than 2048 bits","The remote SSL/TLS server certificate and/or any of the
+  certificates in the certificate chain is using a RSA key with less than 2048 bits.","The remote SSL/TLS server is using the following certificate(s) with a RSA key with less than 2048 bits (public-key-size:public-key-algorithm:serial:issuer):
+
+1024:RSA:00D8BD254AB15C9F5B:1.2.840.113549.1.9.1=#627761707040697473656367616D65732E636F6D,CN=bee-box.bwapp.local,OU=IT,O=MME,L=Menen,ST=Flanders,C=BE (Server certificate)
+",1.3.6.1.4.1.25623.1.0.150710,"",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,52961520-1278-4ae4-8ef3-a33120773a22,"Using certificates with weak RSA key size can lead to
+  unauthorized exposure of sensitive information.","Replace the certificate with a stronger key and reissue the
+  certificates it signed.","","SSL/TLS certificates using RSA keys with less than 2048 bits are
+  considered unsafe.","Checks the RSA keys size of the server certificate and all
+  certificates in chain for a size < 2048 bit.
+Details:
+SSL/TLS: Server Certificate / Certificate in Chain with RSA keys less than 2...
+(OID: 1.3.6.1.4.1.25623.1.0.150710)
+Version used: 2021-12-10T12:48:00Z
+","","","",""
+192.168.56.104,,9443,tcp,5.3,Medium,"Mitigation","SSL/TLS: Server Certificate / Certificate in Chain with RSA keys less than 2048 bits","The remote SSL/TLS server certificate and/or any of the
+  certificates in the certificate chain is using a RSA key with less than 2048 bits.","The remote SSL/TLS server is using the following certificate(s) with a RSA key with less than 2048 bits (public-key-size:public-key-algorithm:serial:issuer):
+
+1024:RSA:00D8BD254AB15C9F5B:1.2.840.113549.1.9.1=#627761707040697473656367616D65732E636F6D,CN=bee-box.bwapp.local,OU=IT,O=MME,L=Menen,ST=Flanders,C=BE (Server certificate)
+",1.3.6.1.4.1.25623.1.0.150710,"",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,3626f809-9877-4f66-9c4b-c6ceee07c8f3,"Using certificates with weak RSA key size can lead to
+  unauthorized exposure of sensitive information.","Replace the certificate with a stronger key and reissue the
+  certificates it signed.","","SSL/TLS certificates using RSA keys with less than 2048 bits are
+  considered unsafe.","Checks the RSA keys size of the server certificate and all
+  certificates in chain for a size < 2048 bit.
+Details:
+SSL/TLS: Server Certificate / Certificate in Chain with RSA keys less than 2...
+(OID: 1.3.6.1.4.1.25623.1.0.150710)
+Version used: 2021-12-10T12:48:00Z
+","","","",""
+192.168.56.104,,22,tcp,5.3,Medium,"Mitigation","Weak Key Exchange (KEX) Algorithm(s) Supported (SSH)","The remote SSH server is configured to allow / support weak key
+  exchange (KEX) algorithm(s).","The remote SSH server supports the following weak KEX algorithm(s):
+
+KEX algorithm                      | Reason
+-------------------------------------------------------------------------------------------
+diffie-hellman-group-exchange-sha1 | Using SHA-1
+diffie-hellman-group1-sha1         | Using Oakley Group 2 (a 1024-bit MODP group) and SHA-1
+",1.3.6.1.4.1.25623.1.0.150713,"",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,d5c0c5b9-cf16-4dd4-a9e5-fd70b0216710,"An attacker can quickly break individual connections.","Disable the reported weak KEX algorithm(s)
+
+  - 1024-bit MODP group / prime KEX algorithms:
+
+  Alternatively use elliptic-curve Diffie-Hellmann in general, e.g. Curve 25519.","","'- 1024-bit MODP group / prime KEX algorithms:
+
+  Millions of HTTPS, SSH, and VPN servers all use the same prime numbers for Diffie-Hellman key
+  exchange. Practitioners believed this was safe as long as new key exchange messages were generated
+  for every connection. However, the first step in the number field sieve-the most efficient
+  algorithm for breaking a Diffie-Hellman connection-is dependent only on this prime.
+
+  A nation-state can break a 1024-bit prime.","Checks the supported KEX algorithms of the remote SSH server.
+
+  Currently weak KEX algorithms are defined as the following:
+
+  - non-elliptic-curve Diffie-Hellmann (DH) KEX algorithms with 1024-bit MODP group / prime
+
+  - ephemerally generated key exchange groups uses SHA-1
+
+  - using RSA 1024-bit modulus key
+Details:
+Weak Key Exchange (KEX) Algorithm(s) Supported (SSH)
+(OID: 1.3.6.1.4.1.25623.1.0.150713)
+Version used: 2022-12-08T10:12:32Z
+","","","",""
+192.168.56.104,,443,tcp,5.0,Medium,"Mitigation","Sensitive File Disclosure (HTTP)","The script attempts to identify files containing sensitive data
+  at the remote web server like e.g.:
+
+  - software (Blog, CMS) configuration or log files
+
+  - web / application server configuration / password files (.htaccess, .htpasswd, web.config,
+  web.xml, ...)
+
+  - Cloud (e.g. AWS) configuration files
+
+  - database backup files
+
+  - SSH or SSL/TLS Private-Keys","The following files containing sensitive information were identified:
+
+Description:   Microsoft IIS / ASP.NET Core Module web.config file accessible. This could contain sensitive information about the structure of the application / web server and shouldn't be accessible.
+Match:         <configuration>
+  <system.webServer>
+Used regex:    ^\s*<(configuration|system\.web(Server)?)>
+Extra match 1:   </system.webServer>
+</configuration>
+Used regex:    ^\s*</(configuration|system\.web(Server)?)>
+URL:           https://192.168.56.104/drupal/web.config
+",1.3.6.1.4.1.25623.1.0.107305,"",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,c020269c-3a40-4934-906b-ae602c9dad2a,"Based on the information provided in these files an attacker might
+  be able to gather additional info and/or sensitive data like usernames and passwords.","The sensitive files shouldn't be accessible via a web server.
+  Restrict access to it or remove it completely.","","","Enumerate the remote web server and check if sensitive files
+  are accessible.
+Details:
+Sensitive File Disclosure (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.107305)
+Version used: 2023-05-23T11:14:48Z
+","","","",""
+192.168.56.104,,80,tcp,5.0,Medium,"Mitigation","Sensitive File Disclosure (HTTP)","The script attempts to identify files containing sensitive data
+  at the remote web server like e.g.:
+
+  - software (Blog, CMS) configuration or log files
+
+  - web / application server configuration / password files (.htaccess, .htpasswd, web.config,
+  web.xml, ...)
+
+  - Cloud (e.g. AWS) configuration files
+
+  - database backup files
+
+  - SSH or SSL/TLS Private-Keys","The following files containing sensitive information were identified:
+
+Description:   Microsoft IIS / ASP.NET Core Module web.config file accessible. This could contain sensitive information about the structure of the application / web server and shouldn't be accessible.
+Match:         <configuration>
+  <system.webServer>
+Used regex:    ^\s*<(configuration|system\.web(Server)?)>
+Extra match 1:   </system.webServer>
+</configuration>
+Used regex:    ^\s*</(configuration|system\.web(Server)?)>
+URL:           http://192.168.56.104/drupal/web.config
+",1.3.6.1.4.1.25623.1.0.107305,"",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,ecb6ee8a-10a9-4049-a87d-9a539370eab0,"Based on the information provided in these files an attacker might
+  be able to gather additional info and/or sensitive data like usernames and passwords.","The sensitive files shouldn't be accessible via a web server.
+  Restrict access to it or remove it completely.","","","Enumerate the remote web server and check if sensitive files
+  are accessible.
+Details:
+Sensitive File Disclosure (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.107305)
+Version used: 2023-05-23T11:14:48Z
+","","","",""
+192.168.56.104,,8443,tcp,5.0,Medium,"Mitigation","Sensitive File Disclosure (HTTP)","The script attempts to identify files containing sensitive data
+  at the remote web server like e.g.:
+
+  - software (Blog, CMS) configuration or log files
+
+  - web / application server configuration / password files (.htaccess, .htpasswd, web.config,
+  web.xml, ...)
+
+  - Cloud (e.g. AWS) configuration files
+
+  - database backup files
+
+  - SSH or SSL/TLS Private-Keys","The following files containing sensitive information were identified:
+
+Description:   Microsoft IIS / ASP.NET Core Module web.config file accessible. This could contain sensitive information about the structure of the application / web server and shouldn't be accessible.
+Match:         <configuration>
+  <system.webServer>
+Used regex:    ^\s*<(configuration|system\.web(Server)?)>
+Extra match 1:   </system.webServer>
+</configuration>
+Used regex:    ^\s*</(configuration|system\.web(Server)?)>
+URL:           https://192.168.56.104:8443/drupal/web.config
+",1.3.6.1.4.1.25623.1.0.107305,"",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,603a67fc-bead-4992-b6d6-88a7e8a85dcb,"Based on the information provided in these files an attacker might
+  be able to gather additional info and/or sensitive data like usernames and passwords.","The sensitive files shouldn't be accessible via a web server.
+  Restrict access to it or remove it completely.","","","Enumerate the remote web server and check if sensitive files
+  are accessible.
+Details:
+Sensitive File Disclosure (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.107305)
+Version used: 2023-05-23T11:14:48Z
+","","","",""
+192.168.56.104,,8080,tcp,5.0,Medium,"Mitigation","Sensitive File Disclosure (HTTP)","The script attempts to identify files containing sensitive data
+  at the remote web server like e.g.:
+
+  - software (Blog, CMS) configuration or log files
+
+  - web / application server configuration / password files (.htaccess, .htpasswd, web.config,
+  web.xml, ...)
+
+  - Cloud (e.g. AWS) configuration files
+
+  - database backup files
+
+  - SSH or SSL/TLS Private-Keys","The following files containing sensitive information were identified:
+
+Description:   Microsoft IIS / ASP.NET Core Module web.config file accessible. This could contain sensitive information about the structure of the application / web server and shouldn't be accessible.
+Match:         <configuration>
+  <system.webServer>
+Used regex:    ^\s*<(configuration|system\.web(Server)?)>
+Extra match 1:   </system.webServer>
+</configuration>
+Used regex:    ^\s*</(configuration|system\.web(Server)?)>
+URL:           http://192.168.56.104:8080/drupal/web.config
+",1.3.6.1.4.1.25623.1.0.107305,"",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,198b934f-c878-4f3f-a4ae-218530bcdb01,"Based on the information provided in these files an attacker might
+  be able to gather additional info and/or sensitive data like usernames and passwords.","The sensitive files shouldn't be accessible via a web server.
+  Restrict access to it or remove it completely.","","","Enumerate the remote web server and check if sensitive files
+  are accessible.
+Details:
+Sensitive File Disclosure (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.107305)
+Version used: 2023-05-23T11:14:48Z
+","","","",""
+192.168.56.104,,25,tcp,5.0,Medium,"Workaround","Check if Mailserver answer to VRFY and EXPN requests","The Mailserver on this host answers to VRFY and/or EXPN requests.","'VRFY root' produces the following answer: 252 2.0.0 root
+
+
+",1.3.6.1.4.1.25623.1.0.100072,"",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,84561782-4343-4c83-9e74-72aa319faefe,"","Disable VRFY and/or EXPN on your Mailserver.
+
+  For postfix add 'disable_vrfy_command=yes' in 'main.cf'.
+
+  For Sendmail add the option 'O PrivacyOptions=goaway'.
+
+  It is suggested that, if you really want to publish this type of information, you use a mechanism
+  that legitimate users actually know about, such as Finger or HTTP.","","VRFY and EXPN ask the server for information about an address. They are
+  inherently unusable through firewalls, gateways, mail exchangers for part-time hosts, etc.","
+Details:
+Check if Mailserver answer to VRFY and EXPN requests
+(OID: 1.3.6.1.4.1.25623.1.0.100072)
+Version used: 2020-08-24T08:40:10Z
+","","","",""
+192.168.56.104,,9443,tcp,5.0,Medium,"Mitigation","SSL/TLS: Report Weak Cipher Suites","This routine reports all Weak SSL/TLS cipher suites accepted
+  by a service.
+
+  NOTE: No severity for SMTP services with 'Opportunistic TLS' and weak cipher suites on port
+  25/tcp is reported. If too strong cipher suites are configured for this service the alternative
+  would be to fall back to an even more insecure cleartext communication.","'Weak' cipher suites accepted by this service via the SSLv3 protocol:
+
+TLS_RSA_WITH_RC4_128_MD5
+TLS_RSA_WITH_RC4_128_SHA
+
+'Weak' cipher suites accepted by this service via the TLSv1.0 protocol:
+
+TLS_RSA_WITH_RC4_128_MD5
+TLS_RSA_WITH_RC4_128_SHA
+
+
+",1.3.6.1.4.1.25623.1.0.103440,"CVE-2013-2566,CVE-2015-2808,CVE-2015-4000",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,7712c277-e4bd-4178-a168-fe42c9019e64,"","The configuration of this services should be changed so
+  that it does not accept the listed weak cipher suites anymore.
+
+  Please see the references for more resources supporting you with this task.","","These rules are applied for the evaluation of the cryptographic
+  strength:
+
+  - RC4 is considered to be weak (CVE-2013-2566, CVE-2015-2808)
+
+  - Ciphers using 64 bit or less are considered to be vulnerable to brute force methods
+  and therefore considered as weak (CVE-2015-4000)
+
+  - 1024 bit RSA authentication is considered to be insecure and therefore as weak
+
+  - Any cipher considered to be secure for only the next 10 years is considered as medium
+
+  - Any other cipher is considered as strong","
+Details:
+SSL/TLS: Report Weak Cipher Suites
+(OID: 1.3.6.1.4.1.25623.1.0.103440)
+Version used: 2021-12-01T13:10:37Z
+","","","DFN-CERT-2021-0775,DFN-CERT-2020-1561,DFN-CERT-2020-1276,DFN-CERT-2017-1821,DFN-CERT-2016-1692,DFN-CERT-2016-1648,DFN-CERT-2016-1168,DFN-CERT-2016-0665,DFN-CERT-2016-0642,DFN-CERT-2016-0184,DFN-CERT-2016-0135,DFN-CERT-2016-0101,DFN-CERT-2016-0035,DFN-CERT-2015-1853,DFN-CERT-2015-1679,DFN-CERT-2015-1632,DFN-CERT-2015-1608,DFN-CERT-2015-1542,DFN-CERT-2015-1518,DFN-CERT-2015-1406,DFN-CERT-2015-1341,DFN-CERT-2015-1194,DFN-CERT-2015-1144,DFN-CERT-2015-1113,DFN-CERT-2015-1078,DFN-CERT-2015-1067,DFN-CERT-2015-1038,DFN-CERT-2015-1016,DFN-CERT-2015-1012,DFN-CERT-2015-0980,DFN-CERT-2015-0977,DFN-CERT-2015-0976,DFN-CERT-2015-0960,DFN-CERT-2015-0956,DFN-CERT-2015-0944,DFN-CERT-2015-0937,DFN-CERT-2015-0925,DFN-CERT-2015-0884,DFN-CERT-2015-0881,DFN-CERT-2015-0879,DFN-CERT-2015-0866,DFN-CERT-2015-0844,DFN-CERT-2015-0800,DFN-CERT-2015-0737,DFN-CERT-2015-0696,DFN-CERT-2014-0977,CB-K21/0067,CB-K19/0812,CB-K17/1750,CB-K16/1593,CB-K16/1552,CB-K16/1102,CB-K16/0617,CB-K16/0599,CB-K16/0168,CB-K16/0121,CB-K16/0090,CB-K16/0030,CB-K15/1751,CB-K15/1591,CB-K15/1550,CB-K15/1517,CB-K15/1514,CB-K15/1464,CB-K15/1442,CB-K15/1334,CB-K15/1269,CB-K15/1136,CB-K15/1090,CB-K15/1059,CB-K15/1022,CB-K15/1015,CB-K15/0986,CB-K15/0964,CB-K15/0962,CB-K15/0932,CB-K15/0927,CB-K15/0926,CB-K15/0907,CB-K15/0901,CB-K15/0896,CB-K15/0889,CB-K15/0877,CB-K15/0850,CB-K15/0849,CB-K15/0834,CB-K15/0827,CB-K15/0802,CB-K15/0764,CB-K15/0733,CB-K15/0667,CB-K14/0935,CB-K13/0942",""
+192.168.56.104,,443,tcp,5.0,Medium,"Mitigation","SSL/TLS: Report Weak Cipher Suites","This routine reports all Weak SSL/TLS cipher suites accepted
+  by a service.
+
+  NOTE: No severity for SMTP services with 'Opportunistic TLS' and weak cipher suites on port
+  25/tcp is reported. If too strong cipher suites are configured for this service the alternative
+  would be to fall back to an even more insecure cleartext communication.","'Weak' cipher suites accepted by this service via the SSLv3 protocol:
+
+TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA
+TLS_RSA_EXPORT_WITH_DES40_CBC_SHA
+TLS_RSA_EXPORT_WITH_RC2_CBC_40_MD5
+TLS_RSA_EXPORT_WITH_RC4_40_MD5
+TLS_RSA_WITH_RC4_128_MD5
+TLS_RSA_WITH_RC4_128_SHA
+
+'Weak' cipher suites accepted by this service via the TLSv1.0 protocol:
+
+TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA
+TLS_RSA_EXPORT_WITH_DES40_CBC_SHA
+TLS_RSA_EXPORT_WITH_RC2_CBC_40_MD5
+TLS_RSA_EXPORT_WITH_RC4_40_MD5
+TLS_RSA_WITH_RC4_128_MD5
+TLS_RSA_WITH_RC4_128_SHA
+
+
+",1.3.6.1.4.1.25623.1.0.103440,"CVE-2013-2566,CVE-2015-2808,CVE-2015-4000",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,a5305fbc-e77a-4caf-bb75-967fa5a6831e,"","The configuration of this services should be changed so
+  that it does not accept the listed weak cipher suites anymore.
+
+  Please see the references for more resources supporting you with this task.","","These rules are applied for the evaluation of the cryptographic
+  strength:
+
+  - RC4 is considered to be weak (CVE-2013-2566, CVE-2015-2808)
+
+  - Ciphers using 64 bit or less are considered to be vulnerable to brute force methods
+  and therefore considered as weak (CVE-2015-4000)
+
+  - 1024 bit RSA authentication is considered to be insecure and therefore as weak
+
+  - Any cipher considered to be secure for only the next 10 years is considered as medium
+
+  - Any other cipher is considered as strong","
+Details:
+SSL/TLS: Report Weak Cipher Suites
+(OID: 1.3.6.1.4.1.25623.1.0.103440)
+Version used: 2021-12-01T13:10:37Z
+","","","DFN-CERT-2021-0775,DFN-CERT-2020-1561,DFN-CERT-2020-1276,DFN-CERT-2017-1821,DFN-CERT-2016-1692,DFN-CERT-2016-1648,DFN-CERT-2016-1168,DFN-CERT-2016-0665,DFN-CERT-2016-0642,DFN-CERT-2016-0184,DFN-CERT-2016-0135,DFN-CERT-2016-0101,DFN-CERT-2016-0035,DFN-CERT-2015-1853,DFN-CERT-2015-1679,DFN-CERT-2015-1632,DFN-CERT-2015-1608,DFN-CERT-2015-1542,DFN-CERT-2015-1518,DFN-CERT-2015-1406,DFN-CERT-2015-1341,DFN-CERT-2015-1194,DFN-CERT-2015-1144,DFN-CERT-2015-1113,DFN-CERT-2015-1078,DFN-CERT-2015-1067,DFN-CERT-2015-1038,DFN-CERT-2015-1016,DFN-CERT-2015-1012,DFN-CERT-2015-0980,DFN-CERT-2015-0977,DFN-CERT-2015-0976,DFN-CERT-2015-0960,DFN-CERT-2015-0956,DFN-CERT-2015-0944,DFN-CERT-2015-0937,DFN-CERT-2015-0925,DFN-CERT-2015-0884,DFN-CERT-2015-0881,DFN-CERT-2015-0879,DFN-CERT-2015-0866,DFN-CERT-2015-0844,DFN-CERT-2015-0800,DFN-CERT-2015-0737,DFN-CERT-2015-0696,DFN-CERT-2014-0977,CB-K21/0067,CB-K19/0812,CB-K17/1750,CB-K16/1593,CB-K16/1552,CB-K16/1102,CB-K16/0617,CB-K16/0599,CB-K16/0168,CB-K16/0121,CB-K16/0090,CB-K16/0030,CB-K15/1751,CB-K15/1591,CB-K15/1550,CB-K15/1517,CB-K15/1514,CB-K15/1464,CB-K15/1442,CB-K15/1334,CB-K15/1269,CB-K15/1136,CB-K15/1090,CB-K15/1059,CB-K15/1022,CB-K15/1015,CB-K15/0986,CB-K15/0964,CB-K15/0962,CB-K15/0932,CB-K15/0927,CB-K15/0926,CB-K15/0907,CB-K15/0901,CB-K15/0896,CB-K15/0889,CB-K15/0877,CB-K15/0850,CB-K15/0849,CB-K15/0834,CB-K15/0827,CB-K15/0802,CB-K15/0764,CB-K15/0733,CB-K15/0667,CB-K14/0935,CB-K13/0942",""
+192.168.56.104,,9443,tcp,5.0,Medium,"Mitigation","Sensitive File Disclosure (HTTP)","The script attempts to identify files containing sensitive data
+  at the remote web server like e.g.:
+
+  - software (Blog, CMS) configuration or log files
+
+  - web / application server configuration / password files (.htaccess, .htpasswd, web.config,
+  web.xml, ...)
+
+  - Cloud (e.g. AWS) configuration files
+
+  - database backup files
+
+  - SSH or SSL/TLS Private-Keys","The following files containing sensitive information were identified:
+
+Description:   Microsoft IIS / ASP.NET Core Module web.config file accessible. This could contain sensitive information about the structure of the application / web server and shouldn't be accessible.
+Match:         <configuration>
+  <system.webServer>
+Used regex:    ^\s*<(configuration|system\.web(Server)?)>
+Extra match 1:   </system.webServer>
+</configuration>
+Used regex:    ^\s*</(configuration|system\.web(Server)?)>
+URL:           https://192.168.56.104:9443/drupal/web.config
+",1.3.6.1.4.1.25623.1.0.107305,"",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,a442945c-757e-421b-adbd-bac1fc3d4265,"Based on the information provided in these files an attacker might
+  be able to gather additional info and/or sensitive data like usernames and passwords.","The sensitive files shouldn't be accessible via a web server.
+  Restrict access to it or remove it completely.","","","Enumerate the remote web server and check if sensitive files
+  are accessible.
+Details:
+Sensitive File Disclosure (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.107305)
+Version used: 2023-05-23T11:14:48Z
+","","","",""
+192.168.56.104,,8080,tcp,5.0,Medium,"WillNotFix","Drupal 7.0 Information Disclosure Vulnerability - Active Check","Drupal is prone to an information disclosure vulnerability.","Vulnerable URL: http://192.168.56.104:8080/drupal/modules/simpletest/tests/upgrade/drupal-6.upload.database.php
+",1.3.6.1.4.1.25623.1.0.902574,"CVE-2011-3730",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,e98ad0a4-912f-45e8-805a-69d4a04de4fb,"Successful exploitation will allow attacker to obtain sensitive
+  information that could aid in further attacks.","No known solution was made available for at least one year
+  since the disclosure of this vulnerability. Likely none will be provided anymore. General solution
+  options are to upgrade to a newer release, disable respective features, remove the product or
+  replace the product by another one.","Drupal version 7.0 is known to be affected.","The flaw is due to insufficient error checking, allows remote
+  attackers to obtain sensitive information via a direct request to a .php file, which reveals the
+  installation path in an error message.","
+Details:
+Drupal 7.0 Information Disclosure Vulnerability - Active Check
+(OID: 1.3.6.1.4.1.25623.1.0.902574)
+Version used: 2021-12-01T11:10:56Z
+","","","",""
+192.168.56.104,,9443,tcp,5.0,Medium,"WillNotFix","Drupal 7.0 Information Disclosure Vulnerability - Active Check","Drupal is prone to an information disclosure vulnerability.","Vulnerable URL: https://192.168.56.104:9443/drupal/modules/simpletest/tests/upgrade/drupal-6.upload.database.php
+",1.3.6.1.4.1.25623.1.0.902574,"CVE-2011-3730",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,591ac6cb-b3fe-4028-9d91-36bdf6308c6b,"Successful exploitation will allow attacker to obtain sensitive
+  information that could aid in further attacks.","No known solution was made available for at least one year
+  since the disclosure of this vulnerability. Likely none will be provided anymore. General solution
+  options are to upgrade to a newer release, disable respective features, remove the product or
+  replace the product by another one.","Drupal version 7.0 is known to be affected.","The flaw is due to insufficient error checking, allows remote
+  attackers to obtain sensitive information via a direct request to a .php file, which reveals the
+  installation path in an error message.","
+Details:
+Drupal 7.0 Information Disclosure Vulnerability - Active Check
+(OID: 1.3.6.1.4.1.25623.1.0.902574)
+Version used: 2021-12-01T11:10:56Z
+","","","",""
+192.168.56.104,,9080,tcp,5.0,Medium,"WillNotFix","Drupal 7.0 Information Disclosure Vulnerability - Active Check","Drupal is prone to an information disclosure vulnerability.","Vulnerable URL: http://192.168.56.104:9080/drupal/modules/simpletest/tests/upgrade/drupal-6.upload.database.php
+",1.3.6.1.4.1.25623.1.0.902574,"CVE-2011-3730",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,d2811395-5f7c-446f-9dc3-450a32dd939f,"Successful exploitation will allow attacker to obtain sensitive
+  information that could aid in further attacks.","No known solution was made available for at least one year
+  since the disclosure of this vulnerability. Likely none will be provided anymore. General solution
+  options are to upgrade to a newer release, disable respective features, remove the product or
+  replace the product by another one.","Drupal version 7.0 is known to be affected.","The flaw is due to insufficient error checking, allows remote
+  attackers to obtain sensitive information via a direct request to a .php file, which reveals the
+  installation path in an error message.","
+Details:
+Drupal 7.0 Information Disclosure Vulnerability - Active Check
+(OID: 1.3.6.1.4.1.25623.1.0.902574)
+Version used: 2021-12-01T11:10:56Z
+","","","",""
+192.168.56.104,,443,tcp,5.0,Medium,"VendorFix","phpMyAdmin Information Disclosure Vulnerability (PMASA-2011-15) - Active Check","phpMyAdmin is prone to an information disclosure vulnerability.","Vulnerable URL: https://192.168.56.104/phpmyadmin/phpmyadmin.css.php?js_frame[]=right
+",1.3.6.1.4.1.25623.1.0.801994,"CVE-2011-3646",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,a7b64490-efff-4589-a563-de8168997743,"Successful exploitation will allow attacker to obtain sensitive
+  information that could aid in further attacks.","Update to version 3.4.6 or later.","phpMyAdmin version 3.4.5 and prior.","The flaw is due to insufficient input validation in 'js_frame'
+  parameter in 'phpmyadmin.css.php', which allows attackers to disclose information that could be
+  used in further attacks.","Sends a crafted HTTP GET request and checks the response.
+Details:
+phpMyAdmin Information Disclosure Vulnerability (PMASA-2011-15) - Active Che...
+(OID: 1.3.6.1.4.1.25623.1.0.801994)
+Version used: 2023-05-16T09:08:27Z
+","","","DFN-CERT-2011-1746,DFN-CERT-2011-1636,DFN-CERT-2011-1618",""
+192.168.56.104,,9443,tcp,5.0,Medium,"Mitigation","SSL/TLS: Certificate Expired","The remote server's SSL/TLS certificate has already expired.","The certificate of the remote service expired on 2018-04-13 18:11:32.
+
+Certificate details:
+fingerprint (SHA-1)             | AE5FB7BE864A78E168318FC1C96A4BD242C4E6C3
+fingerprint (SHA-256)           | FF29B36FCC813AE5B2100D985E692A612DE6F15570374320F85B43076CF08163
+issued by                       | 1.2.840.113549.1.9.1=#627761707040697473656367616D65732E636F6D,CN=bee-box.bwapp.local,OU=IT,O=MME,L=Menen,ST=Flanders,C=BE
+public key algorithm            | RSA
+public key size (bits)          | 1024
+serial                          | 00D8BD254AB15C9F5B
+signature algorithm             | sha1WithRSAEncryption
+subject                         | 1.2.840.113549.1.9.1=#627761707040697473656367616D65732E636F6D,CN=bee-box.bwapp.local,OU=IT,O=MME,L=Menen,ST=Flanders,C=BE
+subject alternative names (SAN) | None
+valid from                      | 2013-04-14 18:11:32 UTC
+valid until                     | 2018-04-13 18:11:32 UTC
+",1.3.6.1.4.1.25623.1.0.103955,"",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,833b8f33-b40a-4a4b-9f7f-c5d7c698ed31,"","Replace the SSL/TLS certificate by a new one.","","This script checks expiry dates of certificates associated with
+  SSL/TLS-enabled services on the target and reports whether any have already expired.","
+Details:
+SSL/TLS: Certificate Expired
+(OID: 1.3.6.1.4.1.25623.1.0.103955)
+Version used: 2021-11-22T15:32:39Z
+","","","",""
+192.168.56.104,,8443,tcp,5.0,Medium,"Mitigation","SSL/TLS: Certificate Expired","The remote server's SSL/TLS certificate has already expired.","The certificate of the remote service expired on 2018-04-13 18:11:32.
+
+Certificate details:
+fingerprint (SHA-1)             | AE5FB7BE864A78E168318FC1C96A4BD242C4E6C3
+fingerprint (SHA-256)           | FF29B36FCC813AE5B2100D985E692A612DE6F15570374320F85B43076CF08163
+issued by                       | 1.2.840.113549.1.9.1=#627761707040697473656367616D65732E636F6D,CN=bee-box.bwapp.local,OU=IT,O=MME,L=Menen,ST=Flanders,C=BE
+public key algorithm            | RSA
+public key size (bits)          | 1024
+serial                          | 00D8BD254AB15C9F5B
+signature algorithm             | sha1WithRSAEncryption
+subject                         | 1.2.840.113549.1.9.1=#627761707040697473656367616D65732E636F6D,CN=bee-box.bwapp.local,OU=IT,O=MME,L=Menen,ST=Flanders,C=BE
+subject alternative names (SAN) | None
+valid from                      | 2013-04-14 18:11:32 UTC
+valid until                     | 2018-04-13 18:11:32 UTC
+",1.3.6.1.4.1.25623.1.0.103955,"",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,ff48f3b3-d47f-4caa-ab94-d5ca75bd7783,"","Replace the SSL/TLS certificate by a new one.","","This script checks expiry dates of certificates associated with
+  SSL/TLS-enabled services on the target and reports whether any have already expired.","
+Details:
+SSL/TLS: Certificate Expired
+(OID: 1.3.6.1.4.1.25623.1.0.103955)
+Version used: 2021-11-22T15:32:39Z
+","","","",""
+192.168.56.104,,443,tcp,5.0,Medium,"Mitigation","SSL/TLS: Certificate Expired","The remote server's SSL/TLS certificate has already expired.","The certificate of the remote service expired on 2018-04-13 18:11:32.
+
+Certificate details:
+fingerprint (SHA-1)             | AE5FB7BE864A78E168318FC1C96A4BD242C4E6C3
+fingerprint (SHA-256)           | FF29B36FCC813AE5B2100D985E692A612DE6F15570374320F85B43076CF08163
+issued by                       | 1.2.840.113549.1.9.1=#627761707040697473656367616D65732E636F6D,CN=bee-box.bwapp.local,OU=IT,O=MME,L=Menen,ST=Flanders,C=BE
+public key algorithm            | RSA
+public key size (bits)          | 1024
+serial                          | 00D8BD254AB15C9F5B
+signature algorithm             | sha1WithRSAEncryption
+subject                         | 1.2.840.113549.1.9.1=#627761707040697473656367616D65732E636F6D,CN=bee-box.bwapp.local,OU=IT,O=MME,L=Menen,ST=Flanders,C=BE
+subject alternative names (SAN) | None
+valid from                      | 2013-04-14 18:11:32 UTC
+valid until                     | 2018-04-13 18:11:32 UTC
+",1.3.6.1.4.1.25623.1.0.103955,"",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,3f3e031c-9d83-48ad-86bf-1b5cc77aca4a,"","Replace the SSL/TLS certificate by a new one.","","This script checks expiry dates of certificates associated with
+  SSL/TLS-enabled services on the target and reports whether any have already expired.","
+Details:
+SSL/TLS: Certificate Expired
+(OID: 1.3.6.1.4.1.25623.1.0.103955)
+Version used: 2021-11-22T15:32:39Z
+","","","",""
+192.168.56.104,,80,tcp,5.0,Medium,"WillNotFix","Drupal 7.0 Information Disclosure Vulnerability - Active Check","Drupal is prone to an information disclosure vulnerability.","Vulnerable URL: http://192.168.56.104/drupal/modules/simpletest/tests/upgrade/drupal-6.upload.database.php
+",1.3.6.1.4.1.25623.1.0.902574,"CVE-2011-3730",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,16692403-b377-406e-a6ea-948d79829a02,"Successful exploitation will allow attacker to obtain sensitive
+  information that could aid in further attacks.","No known solution was made available for at least one year
+  since the disclosure of this vulnerability. Likely none will be provided anymore. General solution
+  options are to upgrade to a newer release, disable respective features, remove the product or
+  replace the product by another one.","Drupal version 7.0 is known to be affected.","The flaw is due to insufficient error checking, allows remote
+  attackers to obtain sensitive information via a direct request to a .php file, which reveals the
+  installation path in an error message.","
+Details:
+Drupal 7.0 Information Disclosure Vulnerability - Active Check
+(OID: 1.3.6.1.4.1.25623.1.0.902574)
+Version used: 2021-12-01T11:10:56Z
+","","","",""
+192.168.56.104,,8443,tcp,5.0,Medium,"WillNotFix","Drupal 7.0 Information Disclosure Vulnerability - Active Check","Drupal is prone to an information disclosure vulnerability.","Vulnerable URL: https://192.168.56.104:8443/drupal/modules/simpletest/tests/upgrade/drupal-6.upload.database.php
+",1.3.6.1.4.1.25623.1.0.902574,"CVE-2011-3730",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,e80d53a1-86f3-4c74-8dca-5515fa761456,"Successful exploitation will allow attacker to obtain sensitive
+  information that could aid in further attacks.","No known solution was made available for at least one year
+  since the disclosure of this vulnerability. Likely none will be provided anymore. General solution
+  options are to upgrade to a newer release, disable respective features, remove the product or
+  replace the product by another one.","Drupal version 7.0 is known to be affected.","The flaw is due to insufficient error checking, allows remote
+  attackers to obtain sensitive information via a direct request to a .php file, which reveals the
+  installation path in an error message.","
+Details:
+Drupal 7.0 Information Disclosure Vulnerability - Active Check
+(OID: 1.3.6.1.4.1.25623.1.0.902574)
+Version used: 2021-12-01T11:10:56Z
+","","","",""
+192.168.56.104,,9080,tcp,5.0,Medium,"Mitigation","Sensitive File Disclosure (HTTP)","The script attempts to identify files containing sensitive data
+  at the remote web server like e.g.:
+
+  - software (Blog, CMS) configuration or log files
+
+  - web / application server configuration / password files (.htaccess, .htpasswd, web.config,
+  web.xml, ...)
+
+  - Cloud (e.g. AWS) configuration files
+
+  - database backup files
+
+  - SSH or SSL/TLS Private-Keys","The following files containing sensitive information were identified:
+
+Description:   Microsoft IIS / ASP.NET Core Module web.config file accessible. This could contain sensitive information about the structure of the application / web server and shouldn't be accessible.
+Match:         <configuration>
+  <system.webServer>
+Used regex:    ^\s*<(configuration|system\.web(Server)?)>
+Extra match 1:   </system.webServer>
+</configuration>
+Used regex:    ^\s*</(configuration|system\.web(Server)?)>
+URL:           http://192.168.56.104:9080/drupal/web.config
+",1.3.6.1.4.1.25623.1.0.107305,"",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,44608264-35c9-4144-a556-15475c9b3611,"Based on the information provided in these files an attacker might
+  be able to gather additional info and/or sensitive data like usernames and passwords.","The sensitive files shouldn't be accessible via a web server.
+  Restrict access to it or remove it completely.","","","Enumerate the remote web server and check if sensitive files
+  are accessible.
+Details:
+Sensitive File Disclosure (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.107305)
+Version used: 2023-05-23T11:14:48Z
+","","","",""
+192.168.56.104,,9443,tcp,5.0,Medium,"VendorFix","SSL/TLS: Renegotiation DoS Vulnerability (CVE-2011-1473, CVE-2011-5094)","The remote SSL/TLS service is prone to a denial of service (DoS)
+  vulnerability.","The following indicates that the remote SSL/TLS service is affected:
+
+Protocol Version | Successful re-done SSL/TLS handshakes (Renegotiation) over an existing / already established SSL/TLS connection
+----------------------------------------------------------------------------------------------------------------------------------
+TLSv1.0          | 10
+",1.3.6.1.4.1.25623.1.0.117761,"CVE-2011-1473,CVE-2011-5094",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,12854e75-0278-4010-8316-71c915e863a8,"The flaw might make it easier for remote attackers to cause a
+  DoS (CPU consumption) by performing many renegotiations within a single connection.","Users should contact their vendors for specific patch information.
+
+  A general solution is to remove/disable renegotiation capabilities altogether from/in the affected
+  SSL/TLS service.","Every SSL/TLS service which does not properly restrict
+  client-initiated renegotiation.","The flaw exists because the remote SSL/TLS service does not
+  properly restrict client-initiated renegotiation within the SSL and TLS protocols.
+
+  Note: The referenced CVEs are affecting OpenSSL and Mozilla Network Security Services (NSS) but
+  both are in a DISPUTED state with the following rationale:
+
+  > It can also be argued that it is the responsibility of server deployments, not a security
+  library, to prevent or limit renegotiation when it is inappropriate within a specific environment.
+
+  Both CVEs are still kept in this VT as a reference to the origin of this flaw.","Checks if the remote service allows to re-do the same SSL/TLS
+  handshake (Renegotiation) over an existing / already established SSL/TLS connection.
+Details:
+SSL/TLS: Renegotiation DoS Vulnerability (CVE-2011-1473, CVE-2011-5094)
+(OID: 1.3.6.1.4.1.25623.1.0.117761)
+Version used: 2021-11-15T10:28:20Z
+","","","DFN-CERT-2017-1013,DFN-CERT-2017-1012,DFN-CERT-2014-0809,DFN-CERT-2013-1928,DFN-CERT-2012-1112,WID-SEC-2023-1435,CB-K17/0980,CB-K17/0979,CB-K14/0772,CB-K13/0915,CB-K13/0462",""
+192.168.56.104,,8080,tcp,5.0,Medium,"VendorFix","phpMyAdmin Information Disclosure Vulnerability (PMASA-2011-15) - Active Check","phpMyAdmin is prone to an information disclosure vulnerability.","Vulnerable URL: http://192.168.56.104:8080/phpmyadmin/phpmyadmin.css.php?js_frame[]=right
+",1.3.6.1.4.1.25623.1.0.801994,"CVE-2011-3646",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,82c98913-8bd4-475d-b75a-0d30c9f7631a,"Successful exploitation will allow attacker to obtain sensitive
+  information that could aid in further attacks.","Update to version 3.4.6 or later.","phpMyAdmin version 3.4.5 and prior.","The flaw is due to insufficient input validation in 'js_frame'
+  parameter in 'phpmyadmin.css.php', which allows attackers to disclose information that could be
+  used in further attacks.","Sends a crafted HTTP GET request and checks the response.
+Details:
+phpMyAdmin Information Disclosure Vulnerability (PMASA-2011-15) - Active Che...
+(OID: 1.3.6.1.4.1.25623.1.0.801994)
+Version used: 2023-05-16T09:08:27Z
+","","","DFN-CERT-2011-1746,DFN-CERT-2011-1636,DFN-CERT-2011-1618",""
+192.168.56.104,,8443,tcp,5.0,Medium,"VendorFix","phpMyAdmin Information Disclosure Vulnerability (PMASA-2011-15) - Active Check","phpMyAdmin is prone to an information disclosure vulnerability.","Vulnerable URL: https://192.168.56.104:8443/phpmyadmin/phpmyadmin.css.php?js_frame[]=right
+",1.3.6.1.4.1.25623.1.0.801994,"CVE-2011-3646",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,9473b54a-9dbd-41ee-9f85-244d678da9d2,"Successful exploitation will allow attacker to obtain sensitive
+  information that could aid in further attacks.","Update to version 3.4.6 or later.","phpMyAdmin version 3.4.5 and prior.","The flaw is due to insufficient input validation in 'js_frame'
+  parameter in 'phpmyadmin.css.php', which allows attackers to disclose information that could be
+  used in further attacks.","Sends a crafted HTTP GET request and checks the response.
+Details:
+phpMyAdmin Information Disclosure Vulnerability (PMASA-2011-15) - Active Che...
+(OID: 1.3.6.1.4.1.25623.1.0.801994)
+Version used: 2023-05-16T09:08:27Z
+","","","DFN-CERT-2011-1746,DFN-CERT-2011-1636,DFN-CERT-2011-1618",""
+192.168.56.104,,80,tcp,5.0,Medium,"VendorFix","phpMyAdmin Information Disclosure Vulnerability (PMASA-2011-15) - Active Check","phpMyAdmin is prone to an information disclosure vulnerability.","Vulnerable URL: http://192.168.56.104/phpmyadmin/phpmyadmin.css.php?js_frame[]=right
+",1.3.6.1.4.1.25623.1.0.801994,"CVE-2011-3646",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,bb299880-9054-4e97-898b-363b6c3b9b5b,"Successful exploitation will allow attacker to obtain sensitive
+  information that could aid in further attacks.","Update to version 3.4.6 or later.","phpMyAdmin version 3.4.5 and prior.","The flaw is due to insufficient input validation in 'js_frame'
+  parameter in 'phpmyadmin.css.php', which allows attackers to disclose information that could be
+  used in further attacks.","Sends a crafted HTTP GET request and checks the response.
+Details:
+phpMyAdmin Information Disclosure Vulnerability (PMASA-2011-15) - Active Che...
+(OID: 1.3.6.1.4.1.25623.1.0.801994)
+Version used: 2023-05-16T09:08:27Z
+","","","DFN-CERT-2011-1746,DFN-CERT-2011-1636,DFN-CERT-2011-1618",""
+192.168.56.104,,443,tcp,5.0,Medium,"WillNotFix","Drupal 7.0 Information Disclosure Vulnerability - Active Check","Drupal is prone to an information disclosure vulnerability.","Vulnerable URL: https://192.168.56.104/drupal/modules/simpletest/tests/upgrade/drupal-6.upload.database.php
+",1.3.6.1.4.1.25623.1.0.902574,"CVE-2011-3730",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,d07fbebe-8bb6-4894-bc87-c632ed10b31e,"Successful exploitation will allow attacker to obtain sensitive
+  information that could aid in further attacks.","No known solution was made available for at least one year
+  since the disclosure of this vulnerability. Likely none will be provided anymore. General solution
+  options are to upgrade to a newer release, disable respective features, remove the product or
+  replace the product by another one.","Drupal version 7.0 is known to be affected.","The flaw is due to insufficient error checking, allows remote
+  attackers to obtain sensitive information via a direct request to a .php file, which reveals the
+  installation path in an error message.","
+Details:
+Drupal 7.0 Information Disclosure Vulnerability - Active Check
+(OID: 1.3.6.1.4.1.25623.1.0.902574)
+Version used: 2021-12-01T11:10:56Z
+","","","",""
+192.168.56.104,,80,tcp,4.8,Medium,"Workaround","Cleartext Transmission of Sensitive Information via HTTP","The host / application transmits sensitive information (username, passwords) in
+  cleartext via HTTP.","The following URLs requires Basic Authentication (URL:realm name):
+
+http://192.168.56.104/phpmyadmin/scripts/setup.php:""phpMyAdmin Setup""
+",1.3.6.1.4.1.25623.1.0.108440,"",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,98c50af7-bcca-4bf8-9052-b0a55e357147,"An attacker could use this situation to compromise or eavesdrop on the
+  HTTP communication between the client and the server using a man-in-the-middle attack to get access to
+  sensitive data like usernames or passwords.","Enforce the transmission of sensitive data via an encrypted SSL/TLS connection.
+  Additionally make sure the host / application is redirecting all users to the secured SSL/TLS connection before
+  allowing to input sensitive data into the mentioned functions.","Hosts / applications which doesn't enforce the transmission of sensitive data via an
+  encrypted SSL/TLS connection.","","Evaluate previous collected information and check if the host / application is not
+  enforcing the transmission of sensitive data via an encrypted SSL/TLS connection.
+
+  The script is currently checking the following:
+
+  - HTTP Basic Authentication (Basic Auth)
+
+  - HTTP Forms (e.g. Login) with input field of type 'password'
+Details:
+Cleartext Transmission of Sensitive Information via HTTP
+(OID: 1.3.6.1.4.1.25623.1.0.108440)
+Version used: 2020-08-24T15:18:35Z
+","","","",""
+192.168.56.104,,21,tcp,4.8,Medium,"Mitigation","FTP Unencrypted Cleartext Login","The remote host is running a FTP service that allows cleartext logins over
+  unencrypted connections.","The remote FTP service accepts logins without a previous sent 'AUTH TLS' command. Response(s):
+
+Non-anonymous sessions: 331 Password required for openvasvt
+Anonymous sessions:     331 Anonymous login ok, send your complete email address as your password
+",1.3.6.1.4.1.25623.1.0.108528,"",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,609985f7-07a3-4a60-b283-7dba7d3459b3,"An attacker can uncover login names and passwords by sniffing traffic to the
+  FTP service.","Enable FTPS or enforce the connection via the 'AUTH TLS' command. Please see
+  the manual of the FTP service for more information.","","","Tries to login to a non FTPS enabled FTP service without sending a
+  'AUTH TLS' command first and checks if the service is accepting the login without enforcing the use of
+  the 'AUTH TLS' command.
+Details:
+FTP Unencrypted Cleartext Login
+(OID: 1.3.6.1.4.1.25623.1.0.108528)
+Version used: 2020-08-24T08:40:10Z
+","","","",""
+192.168.56.104,,443,tcp,4.3,Medium,"WillNotFix","SQLiteManager <= 1.2.4 Multiple XSS Vulnerabilities","SQLiteManager is prone to multiple cross-site scripting (XSS)
+  vulnerabilities.","Vulnerable URL: https://192.168.56.104/sqlite/main.php?dbsel=</script><script>alert(document.cookie)</script>
+",1.3.6.1.4.1.25623.1.0.802373,"CVE-2012-5105",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,ea4c7fe9-b300-431b-89b9-ebcc233eb52d,"Successful exploitation will allow remote attackers to insert
+  arbitrary HTML and script code, which will be executed in a user's browser session in the context
+  of an affected site.","No known solution was made available for at least one year
+  since the disclosure of this vulnerability. Likely none will be provided anymore. General
+  solution options are to upgrade to a newer release, disable respective features, remove the
+  product or replace the product by another one.","SQLiteManager version 1.2.4 and prior.","The flaws are due to improper validation of user-supplied input
+  via the 'dbsel' or 'nsextt' parameters to index.php or main.php script, which allows attacker to
+  execute arbitrary HTML and script code on the user's browser session in the security context of
+  an affected site.","Sends a crafted HTTP GET request and checks the response.
+Details:
+SQLiteManager <= 1.2.4 Multiple XSS Vulnerabilities
+(OID: 1.3.6.1.4.1.25623.1.0.802373)
+Version used: 2022-01-18T12:40:16Z
+","","","",""
+192.168.56.104,,9443,tcp,4.3,Medium,"Mitigation","SSL/TLS: Deprecated TLSv1.0 and TLSv1.1 Protocol Detection","It was possible to detect the usage of the deprecated TLSv1.0
+  and/or TLSv1.1 protocol on this system.","The service is only providing the deprecated TLSv1.0 protocol and supports one or more ciphers. Those supported ciphers can be found in the 'SSL/TLS: Report Supported Cipher Suites' (OID: 1.3.6.1.4.1.25623.1.0.802067) VT.
+",1.3.6.1.4.1.25623.1.0.117274,"CVE-2011-3389,CVE-2015-0204",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,50d12221-309d-4b03-8d24-9051de14e2bc,"An attacker might be able to use the known cryptographic flaws
+  to eavesdrop the connection between clients and the service to get access to sensitive data
+  transferred within the secured connection.
+
+  Furthermore newly uncovered vulnerabilities in this protocols won't receive security updates
+  anymore.","It is recommended to disable the deprecated TLSv1.0 and/or
+  TLSv1.1 protocols in favor of the TLSv1.2+ protocols. Please see the references for more
+  information.","All services providing an encrypted communication using the
+  TLSv1.0 and/or TLSv1.1 protocols.","The TLSv1.0 and TLSv1.1 protocols contain known cryptographic
+  flaws like:
+
+  - CVE-2011-3389: Browser Exploit Against SSL/TLS (BEAST)
+
+  - CVE-2015-0204: Factoring Attack on RSA-EXPORT Keys Padding Oracle On Downgraded Legacy
+  Encryption (FREAK)","Check the used TLS protocols of the services provided by this
+  system.
+Details:
+SSL/TLS: Deprecated TLSv1.0 and TLSv1.1 Protocol Detection
+(OID: 1.3.6.1.4.1.25623.1.0.117274)
+Version used: 2021-07-19T08:11:48Z
+","","","DFN-CERT-2020-0177,DFN-CERT-2020-0111,DFN-CERT-2019-0068,DFN-CERT-2018-1441,DFN-CERT-2018-1408,DFN-CERT-2016-1372,DFN-CERT-2016-1164,DFN-CERT-2016-0388,DFN-CERT-2015-1853,DFN-CERT-2015-1332,DFN-CERT-2015-0884,DFN-CERT-2015-0800,DFN-CERT-2015-0758,DFN-CERT-2015-0567,DFN-CERT-2015-0544,DFN-CERT-2015-0530,DFN-CERT-2015-0396,DFN-CERT-2015-0375,DFN-CERT-2015-0374,DFN-CERT-2015-0305,DFN-CERT-2015-0199,DFN-CERT-2015-0079,DFN-CERT-2015-0021,DFN-CERT-2014-1414,DFN-CERT-2013-1847,DFN-CERT-2013-1792,DFN-CERT-2012-1979,DFN-CERT-2012-1829,DFN-CERT-2012-1530,DFN-CERT-2012-1380,DFN-CERT-2012-1377,DFN-CERT-2012-1292,DFN-CERT-2012-1214,DFN-CERT-2012-1213,DFN-CERT-2012-1180,DFN-CERT-2012-1156,DFN-CERT-2012-1155,DFN-CERT-2012-1039,DFN-CERT-2012-0956,DFN-CERT-2012-0908,DFN-CERT-2012-0868,DFN-CERT-2012-0867,DFN-CERT-2012-0848,DFN-CERT-2012-0838,DFN-CERT-2012-0776,DFN-CERT-2012-0722,DFN-CERT-2012-0638,DFN-CERT-2012-0627,DFN-CERT-2012-0451,DFN-CERT-2012-0418,DFN-CERT-2012-0354,DFN-CERT-2012-0234,DFN-CERT-2012-0221,DFN-CERT-2012-0177,DFN-CERT-2012-0170,DFN-CERT-2012-0146,DFN-CERT-2012-0142,DFN-CERT-2012-0126,DFN-CERT-2012-0123,DFN-CERT-2012-0095,DFN-CERT-2012-0051,DFN-CERT-2012-0047,DFN-CERT-2012-0021,DFN-CERT-2011-1953,DFN-CERT-2011-1946,DFN-CERT-2011-1844,DFN-CERT-2011-1826,DFN-CERT-2011-1774,DFN-CERT-2011-1743,DFN-CERT-2011-1738,DFN-CERT-2011-1706,DFN-CERT-2011-1628,DFN-CERT-2011-1627,DFN-CERT-2011-1619,DFN-CERT-2011-1482,WID-SEC-2023-1435,CB-K18/0799,CB-K16/1289,CB-K16/1096,CB-K15/1751,CB-K15/1266,CB-K15/0850,CB-K15/0764,CB-K15/0720,CB-K15/0548,CB-K15/0526,CB-K15/0509,CB-K15/0493,CB-K15/0384,CB-K15/0365,CB-K15/0364,CB-K15/0302,CB-K15/0192,CB-K15/0079,CB-K15/0016,CB-K14/1342,CB-K14/0231,CB-K13/0845,CB-K13/0796,CB-K13/0790",""
+192.168.56.104,,8443,tcp,4.3,Medium,"Mitigation","SSL/TLS: Deprecated TLSv1.0 and TLSv1.1 Protocol Detection","It was possible to detect the usage of the deprecated TLSv1.0
+  and/or TLSv1.1 protocol on this system.","In addition to TLSv1.2+ the service is also providing the deprecated TLSv1.0 and TLSv1.1 protocols and supports one or more ciphers. Those supported ciphers can be found in the 'SSL/TLS: Report Supported Cipher Suites' (OID: 1.3.6.1.4.1.25623.1.0.802067) VT.
+",1.3.6.1.4.1.25623.1.0.117274,"CVE-2011-3389,CVE-2015-0204",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,b60be8c2-8cfc-4bba-90d9-87585b094d53,"An attacker might be able to use the known cryptographic flaws
+  to eavesdrop the connection between clients and the service to get access to sensitive data
+  transferred within the secured connection.
+
+  Furthermore newly uncovered vulnerabilities in this protocols won't receive security updates
+  anymore.","It is recommended to disable the deprecated TLSv1.0 and/or
+  TLSv1.1 protocols in favor of the TLSv1.2+ protocols. Please see the references for more
+  information.","All services providing an encrypted communication using the
+  TLSv1.0 and/or TLSv1.1 protocols.","The TLSv1.0 and TLSv1.1 protocols contain known cryptographic
+  flaws like:
+
+  - CVE-2011-3389: Browser Exploit Against SSL/TLS (BEAST)
+
+  - CVE-2015-0204: Factoring Attack on RSA-EXPORT Keys Padding Oracle On Downgraded Legacy
+  Encryption (FREAK)","Check the used TLS protocols of the services provided by this
+  system.
+Details:
+SSL/TLS: Deprecated TLSv1.0 and TLSv1.1 Protocol Detection
+(OID: 1.3.6.1.4.1.25623.1.0.117274)
+Version used: 2021-07-19T08:11:48Z
+","","","DFN-CERT-2020-0177,DFN-CERT-2020-0111,DFN-CERT-2019-0068,DFN-CERT-2018-1441,DFN-CERT-2018-1408,DFN-CERT-2016-1372,DFN-CERT-2016-1164,DFN-CERT-2016-0388,DFN-CERT-2015-1853,DFN-CERT-2015-1332,DFN-CERT-2015-0884,DFN-CERT-2015-0800,DFN-CERT-2015-0758,DFN-CERT-2015-0567,DFN-CERT-2015-0544,DFN-CERT-2015-0530,DFN-CERT-2015-0396,DFN-CERT-2015-0375,DFN-CERT-2015-0374,DFN-CERT-2015-0305,DFN-CERT-2015-0199,DFN-CERT-2015-0079,DFN-CERT-2015-0021,DFN-CERT-2014-1414,DFN-CERT-2013-1847,DFN-CERT-2013-1792,DFN-CERT-2012-1979,DFN-CERT-2012-1829,DFN-CERT-2012-1530,DFN-CERT-2012-1380,DFN-CERT-2012-1377,DFN-CERT-2012-1292,DFN-CERT-2012-1214,DFN-CERT-2012-1213,DFN-CERT-2012-1180,DFN-CERT-2012-1156,DFN-CERT-2012-1155,DFN-CERT-2012-1039,DFN-CERT-2012-0956,DFN-CERT-2012-0908,DFN-CERT-2012-0868,DFN-CERT-2012-0867,DFN-CERT-2012-0848,DFN-CERT-2012-0838,DFN-CERT-2012-0776,DFN-CERT-2012-0722,DFN-CERT-2012-0638,DFN-CERT-2012-0627,DFN-CERT-2012-0451,DFN-CERT-2012-0418,DFN-CERT-2012-0354,DFN-CERT-2012-0234,DFN-CERT-2012-0221,DFN-CERT-2012-0177,DFN-CERT-2012-0170,DFN-CERT-2012-0146,DFN-CERT-2012-0142,DFN-CERT-2012-0126,DFN-CERT-2012-0123,DFN-CERT-2012-0095,DFN-CERT-2012-0051,DFN-CERT-2012-0047,DFN-CERT-2012-0021,DFN-CERT-2011-1953,DFN-CERT-2011-1946,DFN-CERT-2011-1844,DFN-CERT-2011-1826,DFN-CERT-2011-1774,DFN-CERT-2011-1743,DFN-CERT-2011-1738,DFN-CERT-2011-1706,DFN-CERT-2011-1628,DFN-CERT-2011-1627,DFN-CERT-2011-1619,DFN-CERT-2011-1482,WID-SEC-2023-1435,CB-K18/0799,CB-K16/1289,CB-K16/1096,CB-K15/1751,CB-K15/1266,CB-K15/0850,CB-K15/0764,CB-K15/0720,CB-K15/0548,CB-K15/0526,CB-K15/0509,CB-K15/0493,CB-K15/0384,CB-K15/0365,CB-K15/0364,CB-K15/0302,CB-K15/0192,CB-K15/0079,CB-K15/0016,CB-K14/1342,CB-K14/0231,CB-K13/0845,CB-K13/0796,CB-K13/0790",""
+192.168.56.104,,443,tcp,4.3,Medium,"VendorFix","SSL/TLS: RSA Temporary Key Handling RSA_EXPORT Downgrade Issue (FREAK)","This host is accepting 'RSA_EXPORT' cipher suites
+  and is prone to man in the middle attack.","'RSA_EXPORT' cipher suites accepted by this service via the SSLv3 protocol:
+
+TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA
+TLS_RSA_EXPORT_WITH_DES40_CBC_SHA
+TLS_RSA_EXPORT_WITH_RC2_CBC_40_MD5
+TLS_RSA_EXPORT_WITH_RC4_40_MD5
+
+'RSA_EXPORT' cipher suites accepted by this service via the TLSv1.0 protocol:
+
+TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA
+TLS_RSA_EXPORT_WITH_DES40_CBC_SHA
+TLS_RSA_EXPORT_WITH_RC2_CBC_40_MD5
+TLS_RSA_EXPORT_WITH_RC4_40_MD5
+
+
+",1.3.6.1.4.1.25623.1.0.805142,"CVE-2015-0204",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,f17eed91-3c4a-4d7b-a061-c929edba1f6a,"Successful exploitation will allow remote
+  attacker to downgrade the security of a session to use 'RSA_EXPORT' cipher suites,
+  which are significantly weaker than non-export cipher suites. This may allow a
+  man-in-the-middle attacker to more easily break the encryption and monitor
+  or tamper with the encrypted stream.","'- Remove support for 'RSA_EXPORT' cipher
+  suites from the service.
+
+  - If running OpenSSL update to version 0.9.8zd or 1.0.0p
+  or 1.0.1k or later.","'- Hosts accepting 'RSA_EXPORT' cipher suites
+
+  - OpenSSL version before 0.9.8zd, 1.0.0 before 1.0.0p, and 1.0.1 before 1.0.1k.","Flaw is due to improper handling RSA
+  temporary keys in a non-export RSA key exchange cipher suite.","Check previous collected cipher suites saved in the KB.
+Details:
+SSL/TLS: RSA Temporary Key Handling 'RSA_EXPORT' Downgrade Issue (FREAK)
+(OID: 1.3.6.1.4.1.25623.1.0.805142)
+Version used: 2022-04-14T06:42:08Z
+","","","DFN-CERT-2018-1408,DFN-CERT-2016-1372,DFN-CERT-2016-1164,DFN-CERT-2016-0388,DFN-CERT-2015-1853,DFN-CERT-2015-1332,DFN-CERT-2015-0884,DFN-CERT-2015-0800,DFN-CERT-2015-0758,DFN-CERT-2015-0567,DFN-CERT-2015-0544,DFN-CERT-2015-0530,DFN-CERT-2015-0396,DFN-CERT-2015-0375,DFN-CERT-2015-0374,DFN-CERT-2015-0305,DFN-CERT-2015-0199,DFN-CERT-2015-0021,CB-K18/0799,CB-K16/1289,CB-K16/1096,CB-K15/1751,CB-K15/1266,CB-K15/0850,CB-K15/0764,CB-K15/0720,CB-K15/0548,CB-K15/0526,CB-K15/0509,CB-K15/0493,CB-K15/0384,CB-K15/0365,CB-K15/0364,CB-K15/0302,CB-K15/0192,CB-K15/0016",""
+192.168.56.104,,443,tcp,4.3,Medium,"Mitigation","SSL/TLS: Deprecated TLSv1.0 and TLSv1.1 Protocol Detection","It was possible to detect the usage of the deprecated TLSv1.0
+  and/or TLSv1.1 protocol on this system.","The service is only providing the deprecated TLSv1.0 protocol and supports one or more ciphers. Those supported ciphers can be found in the 'SSL/TLS: Report Supported Cipher Suites' (OID: 1.3.6.1.4.1.25623.1.0.802067) VT.
+",1.3.6.1.4.1.25623.1.0.117274,"CVE-2011-3389,CVE-2015-0204",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,571c694d-ea91-4282-ac04-71545a6df7f4,"An attacker might be able to use the known cryptographic flaws
+  to eavesdrop the connection between clients and the service to get access to sensitive data
+  transferred within the secured connection.
+
+  Furthermore newly uncovered vulnerabilities in this protocols won't receive security updates
+  anymore.","It is recommended to disable the deprecated TLSv1.0 and/or
+  TLSv1.1 protocols in favor of the TLSv1.2+ protocols. Please see the references for more
+  information.","All services providing an encrypted communication using the
+  TLSv1.0 and/or TLSv1.1 protocols.","The TLSv1.0 and TLSv1.1 protocols contain known cryptographic
+  flaws like:
+
+  - CVE-2011-3389: Browser Exploit Against SSL/TLS (BEAST)
+
+  - CVE-2015-0204: Factoring Attack on RSA-EXPORT Keys Padding Oracle On Downgraded Legacy
+  Encryption (FREAK)","Check the used TLS protocols of the services provided by this
+  system.
+Details:
+SSL/TLS: Deprecated TLSv1.0 and TLSv1.1 Protocol Detection
+(OID: 1.3.6.1.4.1.25623.1.0.117274)
+Version used: 2021-07-19T08:11:48Z
+","","","DFN-CERT-2020-0177,DFN-CERT-2020-0111,DFN-CERT-2019-0068,DFN-CERT-2018-1441,DFN-CERT-2018-1408,DFN-CERT-2016-1372,DFN-CERT-2016-1164,DFN-CERT-2016-0388,DFN-CERT-2015-1853,DFN-CERT-2015-1332,DFN-CERT-2015-0884,DFN-CERT-2015-0800,DFN-CERT-2015-0758,DFN-CERT-2015-0567,DFN-CERT-2015-0544,DFN-CERT-2015-0530,DFN-CERT-2015-0396,DFN-CERT-2015-0375,DFN-CERT-2015-0374,DFN-CERT-2015-0305,DFN-CERT-2015-0199,DFN-CERT-2015-0079,DFN-CERT-2015-0021,DFN-CERT-2014-1414,DFN-CERT-2013-1847,DFN-CERT-2013-1792,DFN-CERT-2012-1979,DFN-CERT-2012-1829,DFN-CERT-2012-1530,DFN-CERT-2012-1380,DFN-CERT-2012-1377,DFN-CERT-2012-1292,DFN-CERT-2012-1214,DFN-CERT-2012-1213,DFN-CERT-2012-1180,DFN-CERT-2012-1156,DFN-CERT-2012-1155,DFN-CERT-2012-1039,DFN-CERT-2012-0956,DFN-CERT-2012-0908,DFN-CERT-2012-0868,DFN-CERT-2012-0867,DFN-CERT-2012-0848,DFN-CERT-2012-0838,DFN-CERT-2012-0776,DFN-CERT-2012-0722,DFN-CERT-2012-0638,DFN-CERT-2012-0627,DFN-CERT-2012-0451,DFN-CERT-2012-0418,DFN-CERT-2012-0354,DFN-CERT-2012-0234,DFN-CERT-2012-0221,DFN-CERT-2012-0177,DFN-CERT-2012-0170,DFN-CERT-2012-0146,DFN-CERT-2012-0142,DFN-CERT-2012-0126,DFN-CERT-2012-0123,DFN-CERT-2012-0095,DFN-CERT-2012-0051,DFN-CERT-2012-0047,DFN-CERT-2012-0021,DFN-CERT-2011-1953,DFN-CERT-2011-1946,DFN-CERT-2011-1844,DFN-CERT-2011-1826,DFN-CERT-2011-1774,DFN-CERT-2011-1743,DFN-CERT-2011-1738,DFN-CERT-2011-1706,DFN-CERT-2011-1628,DFN-CERT-2011-1627,DFN-CERT-2011-1619,DFN-CERT-2011-1482,WID-SEC-2023-1435,CB-K18/0799,CB-K16/1289,CB-K16/1096,CB-K15/1751,CB-K15/1266,CB-K15/0850,CB-K15/0764,CB-K15/0720,CB-K15/0548,CB-K15/0526,CB-K15/0509,CB-K15/0493,CB-K15/0384,CB-K15/0365,CB-K15/0364,CB-K15/0302,CB-K15/0192,CB-K15/0079,CB-K15/0016,CB-K14/1342,CB-K14/0231,CB-K13/0845,CB-K13/0796,CB-K13/0790",""
+192.168.56.104,,443,tcp,4.3,Medium,"VendorFix","Apache HTTP Server ETag Header Information Disclosure Weakness","A weakness has been discovered in the Apache HTTP Server
+  if configured to use the FileETag directive.","Information that was gathered:
+Inode: 838422
+Size: 588
+
+",1.3.6.1.4.1.25623.1.0.103122,"CVE-2003-1418",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,22ab6e4c-c02a-4111-a042-333a5f21dd6e,"Exploitation of this issue may provide an attacker with
+  information that may be used to launch further attacks against a target network.","OpenBSD has released a patch that addresses this issue.
+  Inode numbers returned from the server are now encoded using a private hash to avoid the
+  release of sensitive information.
+
+  Novell has released TID10090670 to advise users to apply the available workaround of
+  disabling the directive in the configuration file for Apache releases on NetWare. Please
+  see the attached Technical Information Document for further details.","","","Due to the way in which Apache HTTP Server generates
+  ETag response headers, it may be possible for an attacker to obtain sensitive information
+  regarding server files. Specifically, ETag header fields returned to a client contain the
+  file's inode number.
+Details:
+Apache HTTP Server ETag Header Information Disclosure Weakness
+(OID: 1.3.6.1.4.1.25623.1.0.103122)
+Version used: 2022-12-05T10:11:03Z
+","Product: cpe:/a:apache:http_server:2.2.8
+Method: Apache HTTP Server Detection Consolidation
+(OID: 1.3.6.1.4.1.25623.1.0.117232)
+","","DFN-CERT-2017-1821,DFN-CERT-2017-0925,DFN-CERT-2015-0495,CB-K17/1750,CB-K17/0896,CB-K15/0469",""
+192.168.56.104,,80,tcp,4.3,Medium,"VendorFix","Apache HTTP Server ETag Header Information Disclosure Weakness","A weakness has been discovered in the Apache HTTP Server
+  if configured to use the FileETag directive.","Information that was gathered:
+Inode: 838422
+Size: 588
+
+",1.3.6.1.4.1.25623.1.0.103122,"CVE-2003-1418",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,d19d6bbf-efb1-4e94-9cf3-e3d20373b783,"Exploitation of this issue may provide an attacker with
+  information that may be used to launch further attacks against a target network.","OpenBSD has released a patch that addresses this issue.
+  Inode numbers returned from the server are now encoded using a private hash to avoid the
+  release of sensitive information.
+
+  Novell has released TID10090670 to advise users to apply the available workaround of
+  disabling the directive in the configuration file for Apache releases on NetWare. Please
+  see the attached Technical Information Document for further details.","","","Due to the way in which Apache HTTP Server generates
+  ETag response headers, it may be possible for an attacker to obtain sensitive information
+  regarding server files. Specifically, ETag header fields returned to a client contain the
+  file's inode number.
+Details:
+Apache HTTP Server ETag Header Information Disclosure Weakness
+(OID: 1.3.6.1.4.1.25623.1.0.103122)
+Version used: 2022-12-05T10:11:03Z
+","Product: cpe:/a:apache:http_server:2.2.8
+Method: Apache HTTP Server Detection Consolidation
+(OID: 1.3.6.1.4.1.25623.1.0.117232)
+","","DFN-CERT-2017-1821,DFN-CERT-2017-0925,DFN-CERT-2015-0495,CB-K17/1750,CB-K17/0896,CB-K15/0469",""
+192.168.56.104,,22,tcp,4.3,Medium,"Mitigation","Weak Encryption Algorithm(s) Supported (SSH)","The remote SSH server is configured to allow / support weak
+  encryption algorithm(s).","The remote SSH server supports the following weak client-to-server encryption algorithm(s):
+
+3des-cbc
+aes128-cbc
+aes192-cbc
+aes256-cbc
+arcfour
+arcfour128
+arcfour256
+blowfish-cbc
+cast128-cbc
+rijndael-cbc@lysator.liu.se
+
+
+The remote SSH server supports the following weak server-to-client encryption algorithm(s):
+
+3des-cbc
+aes128-cbc
+aes192-cbc
+aes256-cbc
+arcfour
+arcfour128
+arcfour256
+blowfish-cbc
+cast128-cbc
+rijndael-cbc@lysator.liu.se
+",1.3.6.1.4.1.25623.1.0.105611,"",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,f47e57b3-d301-4504-8698-8bf43ed677b2,"","Disable the reported weak encryption algorithm(s).","","'- The 'arcfour' cipher is the Arcfour stream cipher with 128-bit
+  keys. The Arcfour cipher is believed to be compatible with the RC4 cipher [SCHNEIER]. Arcfour
+  (and RC4) has problems with weak keys, and should not be used anymore.
+
+  - The 'none' algorithm specifies that no encryption is to be done. Note that this method provides
+  no confidentiality protection, and it is NOT RECOMMENDED to use it.
+
+  - A vulnerability exists in SSH messages that employ CBC mode that may allow an attacker to
+  recover plaintext from a block of ciphertext.","Checks the supported encryption algorithms (client-to-server
+  and server-to-client) of the remote SSH server.
+
+  Currently weak encryption algorithms are defined as the following:
+
+  - Arcfour (RC4) cipher based algorithms
+
+  - none algorithm
+
+  - CBC mode cipher based algorithms
+Details:
+Weak Encryption Algorithm(s) Supported (SSH)
+(OID: 1.3.6.1.4.1.25623.1.0.105611)
+Version used: 2022-12-09T10:11:04Z
+","","","",""
+192.168.56.104,,443,tcp,4.3,Medium,"WillNotFix","phpMyAdmin error.php Cross Site Scripting Vulnerability","phpMyAdmin is prone to a cross-site scripting (XSS) vulnerability.","Vulnerability was detected according to the Vulnerability Detection Method.",1.3.6.1.4.1.25623.1.0.801660,"CVE-2010-4480",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,ea9ddca6-220b-432a-a539-d4e2cb3ea751,"Successful exploitation will allow attackers to inject arbitrary
+HTML code within the error page and conduct phishing attacks.","No known solution was made available for at least one year since the disclosure
+  of this vulnerability. Likely none will be provided anymore. General solution options are to upgrade to a newer
+  release, disable respective features, remove the product or replace the product by another one.","phpMyAdmin version 3.3.8.1 and prior.","The flaw is caused by input validation errors in the 'error.php'
+script when processing crafted BBcode tags containing '@' characters, which
+could allow attackers to inject arbitrary HTML code within the error page
+and conduct phishing attacks.","
+Details:
+phpMyAdmin 'error.php' Cross Site Scripting Vulnerability
+(OID: 1.3.6.1.4.1.25623.1.0.801660)
+Version used: 2022-02-18T13:05:59Z
+","","","DFN-CERT-2011-0467,DFN-CERT-2011-0451,DFN-CERT-2011-0016,DFN-CERT-2011-0002",""
+192.168.56.104,,80,tcp,4.3,Medium,"WillNotFix","phpMyAdmin error.php Cross Site Scripting Vulnerability","phpMyAdmin is prone to a cross-site scripting (XSS) vulnerability.","Vulnerability was detected according to the Vulnerability Detection Method.",1.3.6.1.4.1.25623.1.0.801660,"CVE-2010-4480",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,e53d9e82-b385-441f-a8df-671bb4de733f,"Successful exploitation will allow attackers to inject arbitrary
+HTML code within the error page and conduct phishing attacks.","No known solution was made available for at least one year since the disclosure
+  of this vulnerability. Likely none will be provided anymore. General solution options are to upgrade to a newer
+  release, disable respective features, remove the product or replace the product by another one.","phpMyAdmin version 3.3.8.1 and prior.","The flaw is caused by input validation errors in the 'error.php'
+script when processing crafted BBcode tags containing '@' characters, which
+could allow attackers to inject arbitrary HTML code within the error page
+and conduct phishing attacks.","
+Details:
+phpMyAdmin 'error.php' Cross Site Scripting Vulnerability
+(OID: 1.3.6.1.4.1.25623.1.0.801660)
+Version used: 2022-02-18T13:05:59Z
+","","","DFN-CERT-2011-0467,DFN-CERT-2011-0451,DFN-CERT-2011-0016,DFN-CERT-2011-0002",""
+192.168.56.104,,8443,tcp,4.3,Medium,"WillNotFix","phpMyAdmin error.php Cross Site Scripting Vulnerability","phpMyAdmin is prone to a cross-site scripting (XSS) vulnerability.","Vulnerability was detected according to the Vulnerability Detection Method.",1.3.6.1.4.1.25623.1.0.801660,"CVE-2010-4480",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,21b353cf-9377-44a8-93e2-b4ab44684953,"Successful exploitation will allow attackers to inject arbitrary
+HTML code within the error page and conduct phishing attacks.","No known solution was made available for at least one year since the disclosure
+  of this vulnerability. Likely none will be provided anymore. General solution options are to upgrade to a newer
+  release, disable respective features, remove the product or replace the product by another one.","phpMyAdmin version 3.3.8.1 and prior.","The flaw is caused by input validation errors in the 'error.php'
+script when processing crafted BBcode tags containing '@' characters, which
+could allow attackers to inject arbitrary HTML code within the error page
+and conduct phishing attacks.","
+Details:
+phpMyAdmin 'error.php' Cross Site Scripting Vulnerability
+(OID: 1.3.6.1.4.1.25623.1.0.801660)
+Version used: 2022-02-18T13:05:59Z
+","","","DFN-CERT-2011-0467,DFN-CERT-2011-0451,DFN-CERT-2011-0016,DFN-CERT-2011-0002",""
+192.168.56.104,,8080,tcp,4.3,Medium,"WillNotFix","phpMyAdmin error.php Cross Site Scripting Vulnerability","phpMyAdmin is prone to a cross-site scripting (XSS) vulnerability.","Vulnerability was detected according to the Vulnerability Detection Method.",1.3.6.1.4.1.25623.1.0.801660,"CVE-2010-4480",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,98064c09-8179-4684-94e9-13b1a2f54dec,"Successful exploitation will allow attackers to inject arbitrary
+HTML code within the error page and conduct phishing attacks.","No known solution was made available for at least one year since the disclosure
+  of this vulnerability. Likely none will be provided anymore. General solution options are to upgrade to a newer
+  release, disable respective features, remove the product or replace the product by another one.","phpMyAdmin version 3.3.8.1 and prior.","The flaw is caused by input validation errors in the 'error.php'
+script when processing crafted BBcode tags containing '@' characters, which
+could allow attackers to inject arbitrary HTML code within the error page
+and conduct phishing attacks.","
+Details:
+phpMyAdmin 'error.php' Cross Site Scripting Vulnerability
+(OID: 1.3.6.1.4.1.25623.1.0.801660)
+Version used: 2022-02-18T13:05:59Z
+","","","DFN-CERT-2011-0467,DFN-CERT-2011-0451,DFN-CERT-2011-0016,DFN-CERT-2011-0002",""
+192.168.56.104,,80,tcp,4.3,Medium,"WillNotFix","SQLiteManager <= 1.2.4 Multiple XSS Vulnerabilities","SQLiteManager is prone to multiple cross-site scripting (XSS)
+  vulnerabilities.","Vulnerable URL: http://192.168.56.104/sqlite/main.php?dbsel=</script><script>alert(document.cookie)</script>
+",1.3.6.1.4.1.25623.1.0.802373,"CVE-2012-5105",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,a6977855-c38b-469a-b9b3-541f6989ed7a,"Successful exploitation will allow remote attackers to insert
+  arbitrary HTML and script code, which will be executed in a user's browser session in the context
+  of an affected site.","No known solution was made available for at least one year
+  since the disclosure of this vulnerability. Likely none will be provided anymore. General
+  solution options are to upgrade to a newer release, disable respective features, remove the
+  product or replace the product by another one.","SQLiteManager version 1.2.4 and prior.","The flaws are due to improper validation of user-supplied input
+  via the 'dbsel' or 'nsextt' parameters to index.php or main.php script, which allows attacker to
+  execute arbitrary HTML and script code on the user's browser session in the security context of
+  an affected site.","Sends a crafted HTTP GET request and checks the response.
+Details:
+SQLiteManager <= 1.2.4 Multiple XSS Vulnerabilities
+(OID: 1.3.6.1.4.1.25623.1.0.802373)
+Version used: 2022-01-18T12:40:16Z
+","","","",""
+192.168.56.104,,8443,tcp,4.3,Medium,"WillNotFix","SQLiteManager <= 1.2.4 Multiple XSS Vulnerabilities","SQLiteManager is prone to multiple cross-site scripting (XSS)
+  vulnerabilities.","Vulnerable URL: https://192.168.56.104:8443/sqlite/main.php?dbsel=</script><script>alert(document.cookie)</script>
+",1.3.6.1.4.1.25623.1.0.802373,"CVE-2012-5105",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,cb49a83c-7325-481e-8ddf-0d42980a60d2,"Successful exploitation will allow remote attackers to insert
+  arbitrary HTML and script code, which will be executed in a user's browser session in the context
+  of an affected site.","No known solution was made available for at least one year
+  since the disclosure of this vulnerability. Likely none will be provided anymore. General
+  solution options are to upgrade to a newer release, disable respective features, remove the
+  product or replace the product by another one.","SQLiteManager version 1.2.4 and prior.","The flaws are due to improper validation of user-supplied input
+  via the 'dbsel' or 'nsextt' parameters to index.php or main.php script, which allows attacker to
+  execute arbitrary HTML and script code on the user's browser session in the security context of
+  an affected site.","Sends a crafted HTTP GET request and checks the response.
+Details:
+SQLiteManager <= 1.2.4 Multiple XSS Vulnerabilities
+(OID: 1.3.6.1.4.1.25623.1.0.802373)
+Version used: 2022-01-18T12:40:16Z
+","","","",""
+192.168.56.104,,8080,tcp,4.3,Medium,"WillNotFix","SQLiteManager <= 1.2.4 Multiple XSS Vulnerabilities","SQLiteManager is prone to multiple cross-site scripting (XSS)
+  vulnerabilities.","Vulnerable URL: http://192.168.56.104:8080/sqlite/main.php?dbsel=</script><script>alert(document.cookie)</script>
+",1.3.6.1.4.1.25623.1.0.802373,"CVE-2012-5105",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,2eb773a7-218e-4acd-a504-b13659479ee6,"Successful exploitation will allow remote attackers to insert
+  arbitrary HTML and script code, which will be executed in a user's browser session in the context
+  of an affected site.","No known solution was made available for at least one year
+  since the disclosure of this vulnerability. Likely none will be provided anymore. General
+  solution options are to upgrade to a newer release, disable respective features, remove the
+  product or replace the product by another one.","SQLiteManager version 1.2.4 and prior.","The flaws are due to improper validation of user-supplied input
+  via the 'dbsel' or 'nsextt' parameters to index.php or main.php script, which allows attacker to
+  execute arbitrary HTML and script code on the user's browser session in the security context of
+  an affected site.","Sends a crafted HTTP GET request and checks the response.
+Details:
+SQLiteManager <= 1.2.4 Multiple XSS Vulnerabilities
+(OID: 1.3.6.1.4.1.25623.1.0.802373)
+Version used: 2022-01-18T12:40:16Z
+","","","",""
+192.168.56.104,,9443,tcp,4.3,Medium,"WillNotFix","SQLiteManager <= 1.2.4 Multiple XSS Vulnerabilities","SQLiteManager is prone to multiple cross-site scripting (XSS)
+  vulnerabilities.","Vulnerable URL: https://192.168.56.104:9443/sqlite/main.php?dbsel=</script><script>alert(document.cookie)</script>
+",1.3.6.1.4.1.25623.1.0.802373,"CVE-2012-5105",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,4be9224b-44f4-4fda-a3f7-3431655bd9e9,"Successful exploitation will allow remote attackers to insert
+  arbitrary HTML and script code, which will be executed in a user's browser session in the context
+  of an affected site.","No known solution was made available for at least one year
+  since the disclosure of this vulnerability. Likely none will be provided anymore. General
+  solution options are to upgrade to a newer release, disable respective features, remove the
+  product or replace the product by another one.","SQLiteManager version 1.2.4 and prior.","The flaws are due to improper validation of user-supplied input
+  via the 'dbsel' or 'nsextt' parameters to index.php or main.php script, which allows attacker to
+  execute arbitrary HTML and script code on the user's browser session in the security context of
+  an affected site.","Sends a crafted HTTP GET request and checks the response.
+Details:
+SQLiteManager <= 1.2.4 Multiple XSS Vulnerabilities
+(OID: 1.3.6.1.4.1.25623.1.0.802373)
+Version used: 2022-01-18T12:40:16Z
+","","","",""
+192.168.56.104,,9080,tcp,4.3,Medium,"WillNotFix","SQLiteManager <= 1.2.4 Multiple XSS Vulnerabilities","SQLiteManager is prone to multiple cross-site scripting (XSS)
+  vulnerabilities.","Vulnerable URL: http://192.168.56.104:9080/sqlite/main.php?dbsel=</script><script>alert(document.cookie)</script>
+",1.3.6.1.4.1.25623.1.0.802373,"CVE-2012-5105",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,72c03ef1-4096-464c-a685-755956e7a251,"Successful exploitation will allow remote attackers to insert
+  arbitrary HTML and script code, which will be executed in a user's browser session in the context
+  of an affected site.","No known solution was made available for at least one year
+  since the disclosure of this vulnerability. Likely none will be provided anymore. General
+  solution options are to upgrade to a newer release, disable respective features, remove the
+  product or replace the product by another one.","SQLiteManager version 1.2.4 and prior.","The flaws are due to improper validation of user-supplied input
+  via the 'dbsel' or 'nsextt' parameters to index.php or main.php script, which allows attacker to
+  execute arbitrary HTML and script code on the user's browser session in the security context of
+  an affected site.","Sends a crafted HTTP GET request and checks the response.
+Details:
+SQLiteManager <= 1.2.4 Multiple XSS Vulnerabilities
+(OID: 1.3.6.1.4.1.25623.1.0.802373)
+Version used: 2022-01-18T12:40:16Z
+","","","",""
+192.168.56.104,,8443,tcp,4.0,Medium,"Workaround","SSL/TLS: Diffie-Hellman Key Exchange Insufficient DH Group Strength Vulnerability","The SSL/TLS service uses Diffie-Hellman groups with insufficient strength
+  (key size < 2048).","Server Temporary Key Size: 1024 bits
+
+",1.3.6.1.4.1.25623.1.0.106223,"",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,48a8f7f2-ee70-472a-8fd7-cb0360f4b7a3,"An attacker might be able to decrypt the SSL/TLS communication offline.","Deploy (Ephemeral) Elliptic-Curve Diffie-Hellman (ECDHE) or use
+  a 2048-bit or stronger Diffie-Hellman group (see the references).
+
+  For Apache Web Servers:
+  Beginning with version 2.4.7, mod_ssl will use DH parameters which include primes with lengths of more than 1024 bits.","","The Diffie-Hellman group are some big numbers that are used as base for
+  the DH computations. They can be, and often are, fixed. The security of the final secret depends on the size
+  of these parameters. It was found that 512 and 768 bits to be weak, 1024 bits to be breakable by really
+  powerful attackers like governments.","Checks the DHE temporary public key size.
+Details:
+SSL/TLS: Diffie-Hellman Key Exchange Insufficient DH Group Strength Vulnerab...
+(OID: 1.3.6.1.4.1.25623.1.0.106223)
+Version used: 2021-02-12T06:42:15Z
+","","","",""
+192.168.56.104,,443,tcp,4.0,Medium,"Workaround","SSL/TLS: Diffie-Hellman Key Exchange Insufficient DH Group Strength Vulnerability","The SSL/TLS service uses Diffie-Hellman groups with insufficient strength
+  (key size < 2048).","Server Temporary Key Size: 1024 bits
+
+",1.3.6.1.4.1.25623.1.0.106223,"",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,0e5e10ec-72dd-4a5b-8789-08c70f3ee023,"An attacker might be able to decrypt the SSL/TLS communication offline.","Deploy (Ephemeral) Elliptic-Curve Diffie-Hellman (ECDHE) or use
+  a 2048-bit or stronger Diffie-Hellman group (see the references).
+
+  For Apache Web Servers:
+  Beginning with version 2.4.7, mod_ssl will use DH parameters which include primes with lengths of more than 1024 bits.","","The Diffie-Hellman group are some big numbers that are used as base for
+  the DH computations. They can be, and often are, fixed. The security of the final secret depends on the size
+  of these parameters. It was found that 512 and 768 bits to be weak, 1024 bits to be breakable by really
+  powerful attackers like governments.","Checks the DHE temporary public key size.
+Details:
+SSL/TLS: Diffie-Hellman Key Exchange Insufficient DH Group Strength Vulnerab...
+(OID: 1.3.6.1.4.1.25623.1.0.106223)
+Version used: 2021-02-12T06:42:15Z
+","","","",""
+192.168.56.104,,9443,tcp,4.0,Medium,"Mitigation","SSL/TLS: Certificate Signed Using A Weak Signature Algorithm","The remote service is using a SSL/TLS certificate in the certificate chain that has been signed using a
+  cryptographically weak hashing algorithm.","The following certificates are part of the certificate chain but using insecure signature algorithms:
+
+Subject:              1.2.840.113549.1.9.1=#627761707040697473656367616D65732E636F6D,CN=bee-box.bwapp.local,OU=IT,O=MME,L=Menen,ST=Flanders,C=BE
+Signature Algorithm:  sha1WithRSAEncryption
+
+
+",1.3.6.1.4.1.25623.1.0.105880,"",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,a03416b1-77e3-4799-8064-b9a75e86e341,"","Servers that use SSL/TLS certificates signed with a weak SHA-1, MD5, MD4 or MD2 hashing algorithm will need to obtain new
+  SHA-2 signed SSL/TLS certificates to avoid web browser SSL/TLS certificate warnings.","","The following hashing algorithms used for signing SSL/TLS certificates are considered cryptographically weak
+  and not secure enough for ongoing use:
+
+  - Secure Hash Algorithm 1 (SHA-1)
+
+  - Message Digest 5 (MD5)
+
+  - Message Digest 4 (MD4)
+
+  - Message Digest 2 (MD2)
+
+  Beginning as late as January 2017 and as early as June 2016, browser developers such as Microsoft and Google will begin warning users when visiting
+  web sites that use SHA-1 signed Secure Socket Layer (SSL) certificates.
+
+  NOTE: The script preference allows to set one or more custom SHA-1 fingerprints of CA certificates which are trusted by this routine. The fingerprints
+  needs to be passed comma-separated and case-insensitive:
+
+  Fingerprint1
+
+  or
+
+  fingerprint1, Fingerprint2","Check which hashing algorithm was used to sign the remote SSL/TLS certificate.
+Details:
+SSL/TLS: Certificate Signed Using A Weak Signature Algorithm
+(OID: 1.3.6.1.4.1.25623.1.0.105880)
+Version used: 2021-10-15T11:13:32Z
+","","","",""
+192.168.56.104,,8443,tcp,4.0,Medium,"Mitigation","SSL/TLS: Certificate Signed Using A Weak Signature Algorithm","The remote service is using a SSL/TLS certificate in the certificate chain that has been signed using a
+  cryptographically weak hashing algorithm.","The following certificates are part of the certificate chain but using insecure signature algorithms:
+
+Subject:              1.2.840.113549.1.9.1=#627761707040697473656367616D65732E636F6D,CN=bee-box.bwapp.local,OU=IT,O=MME,L=Menen,ST=Flanders,C=BE
+Signature Algorithm:  sha1WithRSAEncryption
+
+
+",1.3.6.1.4.1.25623.1.0.105880,"",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,0e21b0bd-a4b7-4cdf-bf32-e373ca992bb2,"","Servers that use SSL/TLS certificates signed with a weak SHA-1, MD5, MD4 or MD2 hashing algorithm will need to obtain new
+  SHA-2 signed SSL/TLS certificates to avoid web browser SSL/TLS certificate warnings.","","The following hashing algorithms used for signing SSL/TLS certificates are considered cryptographically weak
+  and not secure enough for ongoing use:
+
+  - Secure Hash Algorithm 1 (SHA-1)
+
+  - Message Digest 5 (MD5)
+
+  - Message Digest 4 (MD4)
+
+  - Message Digest 2 (MD2)
+
+  Beginning as late as January 2017 and as early as June 2016, browser developers such as Microsoft and Google will begin warning users when visiting
+  web sites that use SHA-1 signed Secure Socket Layer (SSL) certificates.
+
+  NOTE: The script preference allows to set one or more custom SHA-1 fingerprints of CA certificates which are trusted by this routine. The fingerprints
+  needs to be passed comma-separated and case-insensitive:
+
+  Fingerprint1
+
+  or
+
+  fingerprint1, Fingerprint2","Check which hashing algorithm was used to sign the remote SSL/TLS certificate.
+Details:
+SSL/TLS: Certificate Signed Using A Weak Signature Algorithm
+(OID: 1.3.6.1.4.1.25623.1.0.105880)
+Version used: 2021-10-15T11:13:32Z
+","","","",""
+192.168.56.104,,443,tcp,4.0,Medium,"Mitigation","SSL/TLS: Certificate Signed Using A Weak Signature Algorithm","The remote service is using a SSL/TLS certificate in the certificate chain that has been signed using a
+  cryptographically weak hashing algorithm.","The following certificates are part of the certificate chain but using insecure signature algorithms:
+
+Subject:              1.2.840.113549.1.9.1=#627761707040697473656367616D65732E636F6D,CN=bee-box.bwapp.local,OU=IT,O=MME,L=Menen,ST=Flanders,C=BE
+Signature Algorithm:  sha1WithRSAEncryption
+
+
+",1.3.6.1.4.1.25623.1.0.105880,"",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,12cfe1e6-cd8a-4c6a-8e29-2b2348b0904a,"","Servers that use SSL/TLS certificates signed with a weak SHA-1, MD5, MD4 or MD2 hashing algorithm will need to obtain new
+  SHA-2 signed SSL/TLS certificates to avoid web browser SSL/TLS certificate warnings.","","The following hashing algorithms used for signing SSL/TLS certificates are considered cryptographically weak
+  and not secure enough for ongoing use:
+
+  - Secure Hash Algorithm 1 (SHA-1)
+
+  - Message Digest 5 (MD5)
+
+  - Message Digest 4 (MD4)
+
+  - Message Digest 2 (MD2)
+
+  Beginning as late as January 2017 and as early as June 2016, browser developers such as Microsoft and Google will begin warning users when visiting
+  web sites that use SHA-1 signed Secure Socket Layer (SSL) certificates.
+
+  NOTE: The script preference allows to set one or more custom SHA-1 fingerprints of CA certificates which are trusted by this routine. The fingerprints
+  needs to be passed comma-separated and case-insensitive:
+
+  Fingerprint1
+
+  or
+
+  fingerprint1, Fingerprint2","Check which hashing algorithm was used to sign the remote SSL/TLS certificate.
+Details:
+SSL/TLS: Certificate Signed Using A Weak Signature Algorithm
+(OID: 1.3.6.1.4.1.25623.1.0.105880)
+Version used: 2021-10-15T11:13:32Z
+","","","",""
+192.168.56.104,,443,tcp,3.7,Low,"VendorFix","SSL/TLS: DHE_EXPORT Man in the Middle Security Bypass Vulnerability (LogJam)","This host is accepting 'DHE_EXPORT' cipher suites
+  and is prone to man in the middle attack.","'DHE_EXPORT' cipher suites accepted by this service via the SSLv3 protocol:
+
+TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA
+
+'DHE_EXPORT' cipher suites accepted by this service via the TLSv1.0 protocol:
+
+TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA
+
+
+",1.3.6.1.4.1.25623.1.0.805188,"CVE-2015-4000",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,c137114e-b037-4c83-b766-09d91a4e26e8,"Successful exploitation will allow a
+  man-in-the-middle attacker to downgrade the security of a TLS session to
+  512-bit export-grade cryptography, which is significantly weaker, allowing
+  the attacker to more easily break the encryption and monitor or tamper with
+  the encrypted stream.","'- Remove support for 'DHE_EXPORT' cipher
+  suites from the service
+
+  - If running OpenSSL updateto version 1.0.2b or 1.0.1n or later.","'- Hosts accepting 'DHE_EXPORT' cipher suites
+
+  - OpenSSL version before 1.0.2b and 1.0.1n","Flaw is triggered when handling
+  Diffie-Hellman key exchanges defined in the 'DHE_EXPORT' cipher suites.","Check previous collected cipher suites saved in the KB.
+Details:
+SSL/TLS: 'DHE_EXPORT' Man in the Middle Security Bypass Vulnerability (LogJa...
+(OID: 1.3.6.1.4.1.25623.1.0.805188)
+Version used: 2022-04-14T06:42:08Z
+","","","DFN-CERT-2021-0775,DFN-CERT-2020-1561,DFN-CERT-2020-1276,DFN-CERT-2016-1692,DFN-CERT-2016-1648,DFN-CERT-2016-0665,DFN-CERT-2016-0642,DFN-CERT-2016-0184,DFN-CERT-2016-0135,DFN-CERT-2016-0101,DFN-CERT-2016-0035,DFN-CERT-2015-1679,DFN-CERT-2015-1632,DFN-CERT-2015-1608,DFN-CERT-2015-1542,DFN-CERT-2015-1518,DFN-CERT-2015-1406,DFN-CERT-2015-1341,DFN-CERT-2015-1194,DFN-CERT-2015-1144,DFN-CERT-2015-1113,DFN-CERT-2015-1078,DFN-CERT-2015-1067,DFN-CERT-2015-1016,DFN-CERT-2015-0980,DFN-CERT-2015-0977,DFN-CERT-2015-0976,DFN-CERT-2015-0960,DFN-CERT-2015-0956,DFN-CERT-2015-0944,DFN-CERT-2015-0925,DFN-CERT-2015-0879,DFN-CERT-2015-0844,DFN-CERT-2015-0737,CB-K21/0067,CB-K19/0812,CB-K16/1593,CB-K16/1552,CB-K16/0617,CB-K16/0599,CB-K16/0168,CB-K16/0121,CB-K16/0090,CB-K16/0030,CB-K15/1591,CB-K15/1550,CB-K15/1517,CB-K15/1464,CB-K15/1442,CB-K15/1334,CB-K15/1269,CB-K15/1136,CB-K15/1090,CB-K15/1059,CB-K15/1022,CB-K15/1015,CB-K15/0964,CB-K15/0932,CB-K15/0927,CB-K15/0926,CB-K15/0907,CB-K15/0901,CB-K15/0896,CB-K15/0877,CB-K15/0834,CB-K15/0802,CB-K15/0733",""
+192.168.56.104,,8443,tcp,3.4,Low,"Mitigation","SSL/TLS: SSLv3 Protocol CBC Cipher Suites Information Disclosure Vulnerability (POODLE)","This host is prone to an information disclosure vulnerability.","Vulnerability was detected according to the Vulnerability Detection Method.",1.3.6.1.4.1.25623.1.0.802087,"CVE-2014-3566",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,06bf57cb-b97f-4f80-b64b-55c84913b6e6,"Successful exploitation will allow a  man-in-the-middle attackers gain access to the plain text data stream.","Possible Mitigations are:
+
+  - Disable SSLv3
+
+  - Disable cipher suites supporting CBC cipher modes
+
+  - Enable TLS_FALLBACK_SCSV if the service is providing TLSv1.0+","","The flaw is due to the block cipher padding not being deterministic and not covered by the Message Authentication Code","Evaluate previous collected information about this service.
+Details:
+SSL/TLS: SSLv3 Protocol CBC Cipher Suites Information Disclosure Vulnerabili...
+(OID: 1.3.6.1.4.1.25623.1.0.802087)
+Version used: 2022-04-14T11:24:11Z
+","","","DFN-CERT-2017-1238,DFN-CERT-2017-1236,DFN-CERT-2016-1929,DFN-CERT-2016-1527,DFN-CERT-2016-1468,DFN-CERT-2016-1168,DFN-CERT-2016-0884,DFN-CERT-2016-0642,DFN-CERT-2016-0388,DFN-CERT-2016-0171,DFN-CERT-2015-1431,DFN-CERT-2015-1075,DFN-CERT-2015-1026,DFN-CERT-2015-0664,DFN-CERT-2015-0548,DFN-CERT-2015-0404,DFN-CERT-2015-0396,DFN-CERT-2015-0259,DFN-CERT-2015-0254,DFN-CERT-2015-0245,DFN-CERT-2015-0118,DFN-CERT-2015-0114,DFN-CERT-2015-0083,DFN-CERT-2015-0082,DFN-CERT-2015-0081,DFN-CERT-2015-0076,DFN-CERT-2014-1717,DFN-CERT-2014-1680,DFN-CERT-2014-1632,DFN-CERT-2014-1564,DFN-CERT-2014-1542,DFN-CERT-2014-1414,DFN-CERT-2014-1366,DFN-CERT-2014-1354,WID-SEC-2023-0431,CB-K17/1198,CB-K17/1196,CB-K16/1828,CB-K16/1438,CB-K16/1384,CB-K16/1102,CB-K16/0599,CB-K16/0156,CB-K15/1514,CB-K15/1358,CB-K15/1021,CB-K15/0972,CB-K15/0637,CB-K15/0590,CB-K15/0525,CB-K15/0393,CB-K15/0384,CB-K15/0287,CB-K15/0252,CB-K15/0246,CB-K15/0237,CB-K15/0118,CB-K15/0110,CB-K15/0108,CB-K15/0080,CB-K15/0078,CB-K15/0077,CB-K15/0075,CB-K14/1617,CB-K14/1581,CB-K14/1537,CB-K14/1479,CB-K14/1458,CB-K14/1342,CB-K14/1314,CB-K14/1313,CB-K14/1311,CB-K14/1304,CB-K14/1296",""
+192.168.56.104,,443,tcp,3.4,Low,"Mitigation","SSL/TLS: SSLv3 Protocol CBC Cipher Suites Information Disclosure Vulnerability (POODLE)","This host is prone to an information disclosure vulnerability.","Vulnerability was detected according to the Vulnerability Detection Method.",1.3.6.1.4.1.25623.1.0.802087,"CVE-2014-3566",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,9ef10f1b-8258-4088-96f1-abfd1b6d6db2,"Successful exploitation will allow a  man-in-the-middle attackers gain access to the plain text data stream.","Possible Mitigations are:
+
+  - Disable SSLv3
+
+  - Disable cipher suites supporting CBC cipher modes
+
+  - Enable TLS_FALLBACK_SCSV if the service is providing TLSv1.0+","","The flaw is due to the block cipher padding not being deterministic and not covered by the Message Authentication Code","Evaluate previous collected information about this service.
+Details:
+SSL/TLS: SSLv3 Protocol CBC Cipher Suites Information Disclosure Vulnerabili...
+(OID: 1.3.6.1.4.1.25623.1.0.802087)
+Version used: 2022-04-14T11:24:11Z
+","","","DFN-CERT-2017-1238,DFN-CERT-2017-1236,DFN-CERT-2016-1929,DFN-CERT-2016-1527,DFN-CERT-2016-1468,DFN-CERT-2016-1168,DFN-CERT-2016-0884,DFN-CERT-2016-0642,DFN-CERT-2016-0388,DFN-CERT-2016-0171,DFN-CERT-2015-1431,DFN-CERT-2015-1075,DFN-CERT-2015-1026,DFN-CERT-2015-0664,DFN-CERT-2015-0548,DFN-CERT-2015-0404,DFN-CERT-2015-0396,DFN-CERT-2015-0259,DFN-CERT-2015-0254,DFN-CERT-2015-0245,DFN-CERT-2015-0118,DFN-CERT-2015-0114,DFN-CERT-2015-0083,DFN-CERT-2015-0082,DFN-CERT-2015-0081,DFN-CERT-2015-0076,DFN-CERT-2014-1717,DFN-CERT-2014-1680,DFN-CERT-2014-1632,DFN-CERT-2014-1564,DFN-CERT-2014-1542,DFN-CERT-2014-1414,DFN-CERT-2014-1366,DFN-CERT-2014-1354,WID-SEC-2023-0431,CB-K17/1198,CB-K17/1196,CB-K16/1828,CB-K16/1438,CB-K16/1384,CB-K16/1102,CB-K16/0599,CB-K16/0156,CB-K15/1514,CB-K15/1358,CB-K15/1021,CB-K15/0972,CB-K15/0637,CB-K15/0590,CB-K15/0525,CB-K15/0393,CB-K15/0384,CB-K15/0287,CB-K15/0252,CB-K15/0246,CB-K15/0237,CB-K15/0118,CB-K15/0110,CB-K15/0108,CB-K15/0080,CB-K15/0078,CB-K15/0077,CB-K15/0075,CB-K14/1617,CB-K14/1581,CB-K14/1537,CB-K14/1479,CB-K14/1458,CB-K14/1342,CB-K14/1314,CB-K14/1313,CB-K14/1311,CB-K14/1304,CB-K14/1296",""
+192.168.56.104,,9443,tcp,3.4,Low,"Mitigation","SSL/TLS: SSLv3 Protocol CBC Cipher Suites Information Disclosure Vulnerability (POODLE)","This host is prone to an information disclosure vulnerability.","Vulnerability was detected according to the Vulnerability Detection Method.",1.3.6.1.4.1.25623.1.0.802087,"CVE-2014-3566",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,cdd249a8-8ca2-4071-9822-b9542c9deb13,"Successful exploitation will allow a  man-in-the-middle attackers gain access to the plain text data stream.","Possible Mitigations are:
+
+  - Disable SSLv3
+
+  - Disable cipher suites supporting CBC cipher modes
+
+  - Enable TLS_FALLBACK_SCSV if the service is providing TLSv1.0+","","The flaw is due to the block cipher padding not being deterministic and not covered by the Message Authentication Code","Evaluate previous collected information about this service.
+Details:
+SSL/TLS: SSLv3 Protocol CBC Cipher Suites Information Disclosure Vulnerabili...
+(OID: 1.3.6.1.4.1.25623.1.0.802087)
+Version used: 2022-04-14T11:24:11Z
+","","","DFN-CERT-2017-1238,DFN-CERT-2017-1236,DFN-CERT-2016-1929,DFN-CERT-2016-1527,DFN-CERT-2016-1468,DFN-CERT-2016-1168,DFN-CERT-2016-0884,DFN-CERT-2016-0642,DFN-CERT-2016-0388,DFN-CERT-2016-0171,DFN-CERT-2015-1431,DFN-CERT-2015-1075,DFN-CERT-2015-1026,DFN-CERT-2015-0664,DFN-CERT-2015-0548,DFN-CERT-2015-0404,DFN-CERT-2015-0396,DFN-CERT-2015-0259,DFN-CERT-2015-0254,DFN-CERT-2015-0245,DFN-CERT-2015-0118,DFN-CERT-2015-0114,DFN-CERT-2015-0083,DFN-CERT-2015-0082,DFN-CERT-2015-0081,DFN-CERT-2015-0076,DFN-CERT-2014-1717,DFN-CERT-2014-1680,DFN-CERT-2014-1632,DFN-CERT-2014-1564,DFN-CERT-2014-1542,DFN-CERT-2014-1414,DFN-CERT-2014-1366,DFN-CERT-2014-1354,WID-SEC-2023-0431,CB-K17/1198,CB-K17/1196,CB-K16/1828,CB-K16/1438,CB-K16/1384,CB-K16/1102,CB-K16/0599,CB-K16/0156,CB-K15/1514,CB-K15/1358,CB-K15/1021,CB-K15/0972,CB-K15/0637,CB-K15/0590,CB-K15/0525,CB-K15/0393,CB-K15/0384,CB-K15/0287,CB-K15/0252,CB-K15/0246,CB-K15/0237,CB-K15/0118,CB-K15/0110,CB-K15/0108,CB-K15/0080,CB-K15/0078,CB-K15/0077,CB-K15/0075,CB-K14/1617,CB-K14/1581,CB-K14/1537,CB-K14/1479,CB-K14/1458,CB-K14/1342,CB-K14/1314,CB-K14/1313,CB-K14/1311,CB-K14/1304,CB-K14/1296",""
+192.168.56.104,,22,tcp,2.6,Low,"Mitigation","Weak MAC Algorithm(s) Supported (SSH)","The remote SSH server is configured to allow / support weak MAC
+  algorithm(s).","The remote SSH server supports the following weak client-to-server MAC algorithm(s):
+
+hmac-md5
+hmac-md5-96
+hmac-sha1-96
+
+
+The remote SSH server supports the following weak server-to-client MAC algorithm(s):
+
+hmac-md5
+hmac-md5-96
+hmac-sha1-96
+",1.3.6.1.4.1.25623.1.0.105610,"",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,75b61bc6-82bf-4854-bcb4-4915fc7b62dd,"","Disable the reported weak MAC algorithm(s).","","","Checks the supported MAC algorithms (client-to-server and
+  server-to-client) of the remote SSH server.
+
+  Currently weak MAC algorithms are defined as the following:
+
+  - MD5 based algorithms
+
+  - 96-bit based algorithms
+
+  - none algorithm
+Details:
+Weak MAC Algorithm(s) Supported (SSH)
+(OID: 1.3.6.1.4.1.25623.1.0.105610)
+Version used: 2021-09-20T11:05:40Z
+","","","",""
+192.168.56.104,,,,2.6,Low,"Mitigation","TCP Timestamps Information Disclosure","The remote host implements TCP timestamps and therefore allows
+  to compute the uptime.","It was detected that the host implements RFC1323/RFC7323.
+
+The following timestamps were retrieved with a delay of 1 seconds in-between:
+Packet 1: 6053248
+Packet 2: 6053491
+",1.3.6.1.4.1.25623.1.0.80091,"",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,2d1513cd-0e7a-4bc4-b4c6-cd78b4da9360,"A side effect of this feature is that the uptime of the remote
+  host can sometimes be computed.","To disable TCP timestamps on linux add the line
+  'net.ipv4.tcp_timestamps = 0' to /etc/sysctl.conf. Execute 'sysctl -p' to apply the settings at
+  runtime.
+
+  To disable TCP timestamps on Windows execute 'netsh int tcp set global timestamps=disabled'
+
+  Starting with Windows Server 2008 and Vista, the timestamp can not be completely disabled.
+
+  The default behavior of the TCP/IP stack on this Systems is to not use the Timestamp options when
+  initiating TCP connections, but use them if the TCP peer that is initiating communication includes
+  them in their synchronize (SYN) segment.
+
+  See the references for more information.","TCP implementations that implement RFC1323/RFC7323.","The remote host implements TCP timestamps, as defined by
+  RFC1323/RFC7323.","Special IP packets are forged and sent with a little delay in
+  between to the target IP. The responses are searched for a timestamps. If found, the timestamps
+  are reported.
+Details:
+TCP Timestamps Information Disclosure
+(OID: 1.3.6.1.4.1.25623.1.0.80091)
+Version used: 2023-05-11T09:09:33Z
+","","","",""
+192.168.56.104,,9443,tcp,2.6,Low,"Mitigation","SSL/TLS: TLS/SPDY Protocol Information Disclosure Vulnerability (CRIME)","The TLS/SPDY protocols are prone to an information-disclosure vulnerability.","The remote service might be vulnerable to the ""CRIME"" attack because it provides the following TLS compression methods:
+
+Protocol:Compression Method
+TLSv1.0:DEFLATE
+SSLv3:DEFLATE
+
+",1.3.6.1.4.1.25623.1.0.108094,"CVE-2012-4929,CVE-2012-4930",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,c1ab97c5-8b3d-4c80-96d1-5e5083b5d25e,"A man-in-the-middle attacker can exploit this issue to gain access to
+  sensitive information that may aid in further attacks.","Disable TLS compression in the configuration of this services. If SPDY below 4 is used upgrade
+  the webserver to a version which supports the successor protocol SPDY/4 or HTTP/2.
+
+  Please see the references for more resources supporting you with this task.","Services enabling TLS compression or supporting the SPDY protocol below SPDY/4 via HTTPS.","","
+Details:
+SSL/TLS: TLS/SPDY Protocol Information Disclosure Vulnerability (CRIME)
+(OID: 1.3.6.1.4.1.25623.1.0.108094)
+Version used: 2022-04-13T11:57:07Z
+","","","DFN-CERT-2017-0519,DFN-CERT-2015-0664,DFN-CERT-2014-1414,DFN-CERT-2014-0483,DFN-CERT-2013-1893,DFN-CERT-2013-0672,DFN-CERT-2013-0631,DFN-CERT-2013-0469,DFN-CERT-2013-0324,DFN-CERT-2013-0321,DFN-CERT-2013-0112,DFN-CERT-2012-2191,DFN-CERT-2012-2062,DFN-CERT-2012-1973,DFN-CERT-2012-1966,CB-K17/0504,CB-K15/0637,CB-K14/1342,CB-K14/0458,CB-K13/0882",""
+192.168.56.104,,,,2.1,Low,"Mitigation","ICMP Timestamp Reply Information Disclosure","The remote host responded to an ICMP timestamp request.","The following response / ICMP packet has been received:
+- ICMP Type: 14
+- ICMP Code: 0
+",1.3.6.1.4.1.25623.1.0.103190,"CVE-1999-0524",bb27ce39-d5c2-4ee8-a575-c28a7798244f,"beeboxs",2023-06-27T22:27:45Z,e695051d-b1e3-4523-b7e3-ad790494f5cf,"This information could theoretically be used to exploit weak
+  time-based random number generators in other services.","Various mitigations are possible:
+
+  - Disable the support for ICMP timestamp on the remote host completely
+
+  - Protect the remote host by a firewall, and block ICMP packets passing through the firewall in
+  either direction (either completely or only for untrusted networks)","","The Timestamp Reply is an ICMP message which replies to a
+  Timestamp message. It consists of the originating timestamp sent by the sender of the Timestamp as
+  well as a receive timestamp and a transmit timestamp.","Sends an ICMP Timestamp (Type 13) request and checks if a
+  Timestamp Reply (Type 14) is received.
+Details:
+ICMP Timestamp Reply Information Disclosure
+(OID: 1.3.6.1.4.1.25623.1.0.103190)
+Version used: 2023-05-11T09:09:33Z
+","","","DFN-CERT-2014-0658,CB-K15/1514,CB-K14/0632",""
